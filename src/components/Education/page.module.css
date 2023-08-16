@@ -1,6 +1,10 @@
-.subcontainer {
+.experience {
+    flex-shrink: 0;
     width: 100%;
-    max-width: 340px;
+    max-width: 700px;
+    /* height: min-content; */
+    /* height: 287px; */
+    /* 287px */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -9,7 +13,7 @@
     background-color: #ffffff;
     overflow: visible;
     position: relative;
-    justify-content: center;
+    align-content: flex-start;
     flex-wrap: nowrap;
     border-radius: 16px;
     border: 1px solid var(--gray_3, #9e9e9e);
@@ -48,35 +52,59 @@
     width: min-content;
 }
 
-.imageContainer {
-    border-radius: 4px;
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgb(215, 215, 215);
-    background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    color: rgb(158, 158, 158);
-    font-size: 22px !important;
-}
-
-
-.pname {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.2em;
-    width: max-content;
-}
-
-.container{
+.text {
     display: flex;
     flex-direction: row;
+    width: max-content;
+    gap: 4px;
+}
+
+.p {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: start;
+    color: #333333;
+}
+
+.role {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: #333333;
+}
+
+.img {
+    border-radius: 4px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 94%;
-    max-width: 700px;
-    height: max-content;
+}
+
+.score{
+    text-align: end;
+}
+
+@media screen and (max-width : 600px) {
+
+    .item,
+    .left,
+    .itemEnd,
+    .info {
+        flex-direction: column;
+        border-bottom: 0px solid #9e9e9e;
+        justify-content: center;
+        align-items: center;
+    } 
+    .p, .score, .role{
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -1,0 +1,33 @@
+.socials{
+    border: 1px solid rgb(158, 158, 158);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.01);
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: min-content;
+    justify-content: center;
+    overflow: visible;
+    padding: 16px 24px;
+}  
+
+.headerSocial {
+    padding: 8px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.01);
+    align-items: center;
+    align-content: center;
+    display: flex;
+  }
+  
+  .headerSocial:hover{
+    background-color: rgba(255, 255, 255, 0.705);
+  }
+  
