@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 @font-face {
@@ -1272,8 +1272,74 @@
 }
 
 @media screen and (max-width : 600px) {
-  .section-heading{
+  .section-heading {
     width: 100%;
     text-align: center;
+  }
+}
+
+
+.accordion {
+  overflow-anchor: none;
+  width: 100%;
+}
+
+.accordion>.card {
+  overflow: hidden
+}
+
+.accordion>.card:not(:last-of-type) {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.accordion>.card:not(:first-of-type) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0
+}
+
+.accordion>.card>.card-header {
+  border-radius: 0;
+  margin-bottom: -1px
+}
+
+.collapse:not(.show) {
+  display: none
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height .35s ease
+}
+
+.accordion-button {
+  padding: 5px;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: 10px;
+  background-color: rgba(158, 158, 158, 0.22);
+  align-items: center;
+  align-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.accordion-button:hover {
+  background-color: rgba(255, 255, 255, 0.705);
+}
+
+.accordion-body {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-size: 16.3px;
+  font-style: normal;
+  font-weight: 360;
+  line-height: 20px;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .collapsing {
+    transition: none
   }
 }

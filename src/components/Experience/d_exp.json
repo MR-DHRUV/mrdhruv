@@ -1,0 +1,37 @@
+[
+    {
+        "year": "May'23-Aug'23",
+        "org": "Rise Higher Education",
+        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\n\nLeveraged Microsoft Azure to proficiently manage deployments and facilitate efficient user file uploads.\n\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience",
+        "title": "SDE Intern",
+        "image":"/rise.jpeg"
+    },
+    {
+        "year": "2021-Present",
+        "org": "SDC USICT",
+        "description": "Being SFS lead I improved student-feedback system’s security, scalability, and reduced loading time by 30% through innovative optimizations, necessary bug fixes and error resolutions.\n\nLed and managed the SFS team, driving significant progress in developing and maintaining the student feedback system.\n\nEfficiently managed a large SQL-based database with feedback and academic data of 10000+ students and teachers across the university",
+        "title": "SFS Lead",
+        "image":"/sdc.jpeg"
+    },
+    {
+        "year": "2020-2021",
+        "org": "InfoXpression USICT",
+        "description": "Created multiple intuitive and reusable react components for the InfoXpression's website (The annual tech fest of GGSIPU, New Delhi).\n\nProgrammed a secure backend system for event registration, inspired by Devfolio, with seamless authentication and team management features which strramlined the registration process.",
+        "title": "Full Stack Developer",
+        "image":"/infox.jpeg"
+    },
+    {
+        "year": "2020-2021",
+        "org": "Microsoft",
+        "description": "For the community, I automated the process of creating and emailing event certificates by fabricating a robust Node.js script.\n\nThe program extracts data from an Excel file and generates and emails certificates in bulk quickly and accurately, eliminating the need for manual entry.",
+        "title": "Microsoft Learn Student Ambassador",
+        "image":"/mlsa.png"
+    },
+    {
+        "year": "2020-2021",
+        "org": "GDSC, USICT",
+        "description": "I conducted events on Git, GitHub, and Open Source which provided exposure to students on my campus. I also led a successful Hactoberfest'22 workshop, helping many students complete their contributions",
+        "title": "Open Source Mentor",
+        "image":"/gdsc.jpeg"
+    }
+]

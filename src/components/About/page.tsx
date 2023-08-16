@@ -12,7 +12,7 @@ export default function About() {
                 </span>
                 Software-Developer
                 <span className={styles.muted}>
-                    {'}}'}
+                    {'}}'} 
                 </span>
                 {window.innerWidth > 600 && " 🚀"} 
             </h1>
