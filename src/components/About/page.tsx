@@ -8,11 +8,11 @@ export default function About() {
                 <span className={styles.muted}>
                     {'{{'}
                 </span>
-                Art-Director
+                Software-Developer
                 <span className={styles.muted}>
                     {'}}'}
                 </span>
-                🚀 @ Rockie
+                🚀
             </h1>
             <div className={styles.tags}>
                 <div className={styles.tag}>
@@ -27,9 +27,10 @@ export default function About() {
                     <img src="https://framerusercontent.com/images/NlgEZGfsuTMScgi5lWK78nheeo.png" className={styles.tagImg} height={16} />
                     <p className={styles.tagText}>Next.js</p>
                 </div>
+                
             </div>
             <p className={styles.description}>
-                Passionate product designer with a flair for creating intuitive user experiences. Combining creativity and problem-solving to craft visually stunning and functional designs. Dedicated to delivering innovative solutions that delight users. Ready to shape the future of user-centric products.
+                I'm a skilled web developer with expertise in <strong>Next.js, React.js, and Node.js</strong>. With my strong knowledge of <strong>Data Structures and Algorithms</strong>, I love to optimize the performance and functionality of web apps. Moreover, I have a good command of <strong>C, C++, and Python</strong>. I've worked on various APIs and web apps for startups and campus clubs. Let's connect and share knowledge!
             </p>
         </div>
     )
