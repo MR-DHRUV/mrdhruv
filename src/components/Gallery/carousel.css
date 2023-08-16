@@ -1,0 +1,42 @@
+.example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.next,
+.prev {
+    top: calc(50% - 20px);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    z-index: 2;
+    color: white;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+
+.carouselImg {
+    position: absolute;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    width: 86%;
+    border-radius: 16px;
+}

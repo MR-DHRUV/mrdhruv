@@ -24,7 +24,7 @@
         "year": "2020-2021",
         "org": "Microsoft",
         "description": "For the community, I automated the process of creating and emailing event certificates by fabricating a robust Node.js script.\n\nThe program extracts data from an Excel file and generates and emails certificates in bulk quickly and accurately, eliminating the need for manual entry.",
-        "title": "Microsoft Learn Student Ambassador",
+        "title": "Learn Student Ambassador",
         "image":"/mlsa.png"
     },
     {
