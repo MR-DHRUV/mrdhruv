@@ -27,7 +27,7 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                     </div>
                     <div className={styles.right}>
                         <Accordion.Header>
-                            <NavArrowDown width={20} height={20} color='' />
+                            <NavArrowDown width={20} height={20} color=''/>
                         </Accordion.Header>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
             </Accordion.Item>
         </>
     );
-}
+} 
 
 export default Card;
 /*
