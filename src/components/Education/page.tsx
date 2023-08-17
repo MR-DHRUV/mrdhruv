@@ -8,7 +8,7 @@ export default function Education() {
             </h2>
             <div className={styles.item}>
                 <div className={styles.left}>
-                    <img src="/mtabu.jpeg" alt="" height={35} className={styles.img} />
+                    <img src="/static/mtabu.jpeg" alt="" height={35} className={styles.img} />
                     <div className={styles.info}>
                         <div className={styles.text}>
                             <p className={styles.role}>XII - Science/Non-Medical</p>
@@ -27,7 +27,7 @@ export default function Education() {
             </div>
             <div className={styles.itemEnd}>
                 <div className={styles.left}>
-                    <img src="/ggsipu.png" alt="" height={35} className={styles.img} />
+                    <img src="/static/ggsipu.png" alt="" height={35} className={styles.img} />
                     <div className={styles.info}>
                         <div className={styles.text}>
                             <p className={styles.role}>B.Tech Computer Science</p>

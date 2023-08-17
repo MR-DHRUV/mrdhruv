@@ -16,31 +16,31 @@ const size = 22;
 
 const projectdata: cardProp[] = [
     {
-        "url": "",
+        "url": "/authify",
         "name": "Authify",
         "isLast": false,
         "icon": <GppGoodIcon width={size} height={size} />
     },
     {
-        "url": "",
+        "url": "/axonify",
         "name": "Axonify",
         "isLast": false,
         "icon": <TryIcon width={size} height={size} />
     },
     {
-        "url": "",
+        "url": "/gencert",
         "name": "Certify",
         "isLast": false,
         "icon": <WorkspacePremiumIcon width={size} height={size} />
     },
     {
-        "url": "",
+        "url": "/mausam",
         "name": "Mausam",
         "isLast": false,
         "icon": <CloudIcon width={size} height={size} />
     },
     {
-        "url": "",
+        "url": "/notify",
         "name": "Notify",
         "isLast": true,
         "icon": <PageEdit width={size} height={size} />

@@ -21,7 +21,7 @@ export default function Hobbies() {
             </div>
             <div className={styles.subcontainer}>
                 {/* <Carousel /> */}
-                <iframe src="https://open.spotify.com/embed/playlist/39d35DN2b1DkxEc2obaXF9?utm_source=generator&theme=0" width="100%"  frameBorder="0" height="352px" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe src="https://open.spotify.com/embed/playlist/39d35DN2b1DkxEc2obaXF9?utm_source=generator&theme=0" width="100%"  frameBorder="0" height="352px" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" allowFullScreen={false}></iframe>
             </div>
         </div>
     ) 

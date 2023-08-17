@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.gradientTop}>
-        <img src="/gradient.png" alt="gradient" className={styles.gradient}/>
+        <img src="/static/gradient.png" alt="gradient" className={styles.gradient}/>
       </div>
       <div className={styles.mainContainer}>
         <Header />
@@ -23,7 +23,7 @@ export default function Home() {
         <Hobbies />
       </div> 
       <div className={styles.gradientbottom}>
-        <img src="/gradient.png" alt="gradient" className={styles.gradient}/>
+        <img src="/static/gradient.png" alt="gradient" className={styles.gradient}/>
       </div>
       {/* <div className={styles.gradientbottom}></div> */}
     </>
