@@ -19,7 +19,7 @@
 
 .p {
     font-family: "IBM Plex Sans Condensed", sans-serif;
-    font-size: 14px;
+    font-size: 15.5px;
     font-style: normal;
     font-weight: 300;
     line-height: 20px;
@@ -38,11 +38,12 @@
 
 .statContainer {
     width: 100%;
+    margin-top: 1rem;
 }
 
 
 .subcontainer {
-    width: 40%;
+    width: 44%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -54,7 +55,7 @@
 .statBar {
     width: 100%;
     height: 16px;
-    border: 2px solid #333333;
+    border: 2px solid #3c3c3c;
     border-radius: 7px;
     display: flex;
     align-items: center;
@@ -63,7 +64,7 @@
 
 .statPercentage {
     height: 10px;
-    background-color: #000000;
+    background-color: #3c3c3c;
     border-radius: 5px;
 }
 
@@ -75,14 +76,101 @@
     padding: 0 0.2rem 0.2rem 0.2rem;
 }
 
+.platform {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 1.3rem;
+}
 
-@media screen and (max-width: 780px) {
+.platContainer {
+    flex: 1;
+    max-width: 148px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #000000;
+    border-radius: 16px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.platName {
+    color: #000000;
+    font-family: "IBM Plex Sans Mono", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.platCount {
+    color: #3c3c3c;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    border: 1px solid rgb(158, 158, 158);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    max-width: 700px;
+    border-radius: 16px;
+    padding: 11px;
+    cursor: pointer;
+    text-decoration: none;
+
+    webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 17px rgba(0, 0, 0, 0.12);
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.chartContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 730px) {
     .container {
         flex-direction: column;
         gap: 26px;
     }
-
     .subcontainer {
-        max-width: 100vw;
+        width: 100%;
+        gap: 20px;
+        margin-bottom: 0px;
     }
 }

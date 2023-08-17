@@ -22,7 +22,7 @@ export default function Home() {
         <Experience />
         <DSA />
         <Projects />
-        <Hobbies />
+        <Hobbies /> 
       </div> 
       <div className={styles.gradientbottom}>
         <img src="/static/gradient.png" alt="gradient" className={styles.gradient}/>

@@ -97,6 +97,7 @@ export default function Chart(props: any) {
                 fill="#3c3c3c"
                 dataKey="value"
                 onMouseEnter={onPieEnter}
+                onTouchEnd={onPieEnter}
             />
         </PieChart>
     );
