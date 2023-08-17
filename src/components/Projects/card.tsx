@@ -3,22 +3,19 @@ import styles from "./page.module.css"
 import { ArrowRight } from "iconoir-react"
 import GppGoodIcon from '@mui/icons-material/GppGood';
 import Link from "next/link";
-
-export interface cardProp {
-    isLast: boolean;
-};
+import { cardProp } from "./d_projects"
 
 
-const Card: React.FC<cardProp> = ({isLast})=>{
+const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
     return (
         <div className={!isLast ? styles.item : styles.itemEnd}>
             <div className={styles.left}>
                 <div className={styles.imageContainer}>
-                    <GppGoodIcon width={22} height={22} />
+                    {icon}
                 </div>
-                <p className={styles.pname}>Authify</p>
+                <p className={styles.pname}>{name}</p>
             </div>
-            <Link href="/" className={styles.link}>
+            <Link href={url} target="_blank" className={styles.link}>
                 <p className={styles.linkText}>
                     Take a look
                 </p>

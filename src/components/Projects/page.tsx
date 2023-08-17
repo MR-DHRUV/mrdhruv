@@ -1,6 +1,8 @@
 import Link from "next/link"
 import styles from "./page.module.css"
-import Card, {cardProp} from "./card"
+import Card from "./card"
+import projectData , {cardProp} from "./d_projects"
+
 
 export default function Projects() {
     return (
@@ -8,10 +10,9 @@ export default function Projects() {
             <h2 className="section-heading">
                 Projects
             </h2>
-            <Card isLast={false} />
-            <Card isLast={false} />
-            <Card isLast={false} />
-            <Card isLast={true} />
+            {projectData.map((item, idx) => (
+                <Card {...item} key={idx}/>
+            ))}
         </div>
     )
-} 
+}  
