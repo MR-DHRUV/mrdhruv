@@ -1,0 +1,88 @@
+.dsa {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 700px;
+    /* height: min-content; */
+    /* 287px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px;
+    background-color: #ffffff;
+    overflow: visible;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 16px;
+    border: 1px solid var(--gray_3, #9e9e9e);
+}
+
+.p {
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    text-align: start;
+    color: #333333;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: max-content;
+}
+
+.statContainer {
+    width: 100%;
+}
+
+
+.subcontainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.statBar {
+    width: 100%;
+    height: 16px;
+    border: 2px solid #333333;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding-left: 1px;
+}
+
+.statPercentage {
+    height: 10px;
+    background-color: #000000;
+    border-radius: 5px;
+}
+
+.statHeader {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.2rem 0.2rem 0.2rem;
+}
+
+
+@media screen and (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .subcontainer {
+        max-width: 100vw;
+    }
+}

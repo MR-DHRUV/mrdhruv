@@ -6,6 +6,7 @@ import Header from '@/components/Header/page'
 import styles from "./page.module.css"
 import Education from '@/components/Education/page'
 import Socials from '@/components/Socials/page'
+import DSA from '@/components/DSA/page'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Education />
         <Socials />
         <Experience />
+        <DSA />
         <Projects />
         <Hobbies />
       </div> 

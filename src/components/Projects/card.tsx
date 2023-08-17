@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "./page.module.css"
 import { ArrowRight } from "iconoir-react"
-import GppGoodIcon from '@mui/icons-material/GppGood';
-import Link from "next/link";
 import { cardProp } from "./d_projects"
+import Link from "next/link";
 
 
 const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
