@@ -18,7 +18,7 @@ export default function Contact() {
     return (
         <div className={styles.container}>
             <h2 className="section-heading">
-                Conatact
+                Contact
             </h2>
             <p className={styles.p}>
                 Scrolled till here! Well stop overthinking and contact me.
@@ -62,4 +62,4 @@ export default function Contact() {
 
         </div>
     )
-}           
+}            

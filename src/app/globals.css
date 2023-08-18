@@ -5,7 +5,9 @@
   word-wrap: break-word;
 }
 
-*:focus-visible, *:active, *:focus{
+*:focus-visible,
+*:active,
+*:focus {
   outline: none !important;
 }
 
@@ -1356,9 +1358,10 @@
   height: 65% !important;
 }
 
-.MuiInputBase-root{
+.MuiInputBase-root {
   border-radius: 10px !important;
 }
+
 
 @media (prefers-reduced-motion:reduce) {
   .collapsing {
