@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie, Sector } from "recharts";
+import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 
 const renderActiveShape = (props: any) => {
     const RADIAN = Math.PI / 180;
@@ -75,8 +75,8 @@ const renderActiveShape = (props: any) => {
     );
 };
 
-export default function Chart(props: any) {
-    const [activeIndex, setActiveIndex] = useState(0);
+export default function ChartDesktop(props: any) {
+    const [activeIndex, setActiveIndex] = useState(1);
     const onPieEnter = useCallback(
         (_: any, index: any) => {
             setActiveIndex(index);
@@ -85,20 +85,22 @@ export default function Chart(props: any) {
     );
 
     return (
-        <PieChart width={350} height={250}>
-            <Pie
-                activeIndex={activeIndex}
-                activeShape={renderActiveShape}
-                data={props.data}
-                cx={180}
-                cy={120}
-                innerRadius={60}
-                outerRadius={80}
-                fill="#3c3c3c"
-                dataKey="value"
-                onMouseEnter={onPieEnter}
-                onTouchEnd={onPieEnter}
-            />
-        </PieChart>
+        <ResponsiveContainer width={350} height={270}   >
+            <PieChart>
+                <Pie
+                    activeIndex={activeIndex}
+                    activeShape={renderActiveShape}
+                    data={props.data}
+                    cx={180}
+                    cy={120}
+                    innerRadius={60}
+                    outerRadius={80}
+                    fill="#3c3c3c"
+                    dataKey="value"
+                    onMouseEnter={onPieEnter}
+                    onTouchEnd={onPieEnter}
+                />
+            </PieChart>
+        </ResponsiveContainer>
     );
 }

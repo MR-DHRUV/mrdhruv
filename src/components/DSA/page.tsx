@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./page.module.css"
-import Chart from "./chart.";
+import ChartDesktop from "./chartDestop";
+import ChartMobile from "./chartMobile";
 import Image from "next/image";
-import { Avatar, Chip } from "@mui/material";
 import Link from "next/link";
 
 interface data {
@@ -71,10 +71,20 @@ export default function DSA() {
         ])
     }
 
+    const [show, setShow] = useState(true);
+
     // useEffect(() => {
     //     getData();
     // }, [])
 
+    useEffect(() => {
+        if (window.innerWidth >= 730) {
+            setShow(true);
+        }
+        else {
+            setShow(false);
+        }
+    }, [])
 
     return (
         <div className={styles.dsa}>
@@ -82,7 +92,7 @@ export default function DSA() {
                 DSA
             </h2>
             <div className={styles.footer}>
-                <p className={styles.p}>Let's commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset. </p>
+                <p className={styles.p}>Let's commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
             </div>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
@@ -97,7 +107,7 @@ export default function DSA() {
                     ))}
                 </div>
                 <div className={styles.chartContainer}>
-                    <Chart data={chartData} />
+                    {show ? <ChartDesktop data={chartData} /> : <ChartMobile data={chartData} />}
                 </div>
             </div>
 
@@ -110,7 +120,6 @@ export default function DSA() {
                     <div className={styles.statPercentage} style={{ width: `${(stats.streak / 365) * 100}%` }} />
                 </div>
             </div>
-
         </div>
     )
 }
