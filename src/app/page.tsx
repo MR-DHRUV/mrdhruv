@@ -12,10 +12,10 @@ import Contact from '@/components/Contact/page'
 export default function Home() {
   return (
     <>
-      <div className={styles.gradientTop}>
-        <img src="/static/gradient.png" alt="gradient" className={styles.gradient}/>
-      </div>
       <div className={styles.mainContainer}>
+        <div className={styles.gradientTop}>
+          <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
+        </div>
         <Header />
         <About />
         <Education />
@@ -23,15 +23,16 @@ export default function Home() {
         <Experience />
         <DSA />
         <Projects />
-        <Hobbies /> 
+        <Hobbies />
         <Contact />
-      </div> 
-      <div className={styles.gradientbottom}>
-        <img src="/static/gradient.png" alt="gradient" className={styles.gradient}/>
+        <div className={styles.gradientbottom}>
+          <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
+        </div>
       </div>
       {/* <div className={styles.gradientbottom}></div> */}
-    </>
+    </> 
   )
 }
 
-
+ 
+       
