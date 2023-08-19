@@ -2,35 +2,35 @@
     {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
-        "description": "I designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nI utilised Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.",
+        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nI utilised Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.",
         "title": "SDE Intern",
         "image":"/static/rise.jpeg"
     },
     {
         "year": "2021-Present",
         "org": "SDC USICT",
-        "description": "Being SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes. I Led and managed the SFS team, driving significant progress in developing and maintaining the SFS portal. I administered a SQL-based database with feedback and academic data of 10000+ students and teachers across the university.",
+        "description": "Being SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes.\nI Led and managed the SFS team, driving significant progress in developing and maintaining the SFS portal.\nI administered a SQL-based database with feedback and academic data of 10000+ students and teachers across the university.",
         "title": "SFS Lead",
         "image":"/static/sdc.jpeg"
     },
     {
         "year": "2020-2021",
         "org": "InfoXpression USICT",
-        "description": "I created multiple scalable, intuitive and reusable react components for InfoXpression's website (The annual tech fest of GGSIPU, New Delhi). I programmed a secure backend system for event registration, inspired by Devfolio, with seamless authentication and team management features that streamlined the participant registration and management process.",
+        "description": "Created multiple scalable, intuitive and reusable react components for InfoXpression's website (The annual tech fest of GGSIPU, New Delhi).\nProgrammed a secure backend system for event registration, inspired by Devfolio, with seamless authentication and team management features that streamlined the participant registration and management process.",
         "title": "Full Stack Developer",
         "image":"/static/infox.jpeg"
     },
     {
         "year": "2020-2021",
         "org": "Microsoft",
-        "description": "For the community, I automated the tiresome process of creating and emailing event certificates by fabricating a robust Node.js script. The program extracts data from an Excel file and generates and emails certificates in bulk quickly and accurately, eliminating the need for manual entry.",
+        "description": "For the community, I automated the tiresome process of creating and emailing event certificates by fabricating a robust Node.js script.\nThe program extracts data from an Excel file and generates and emails certificates in bulk quickly and accurately, eliminating the need for manual entry.",
         "title": "Learn Student Ambassador",
         "image":"/static/mlsa.png"
     },
     {
         "year": "2020-2021",
         "org": "GDSC, USICT",
-        "description": "I conducted events on Git, GitHub, and Open Source which provided exposure to students on my campus. I also led a successful Hactoberfest'22 campaign, helping many students complete their contributions.",
+        "description": "I conducted events on Git, GitHub, and Open Source which provided exposure to students on my campus.\nI also led a successful Hactoberfest'22 campaign, helping many students complete their contributions.",
         "title": "Open Source Mentor",
         "image":"/static/gdsc.jpeg"
     }

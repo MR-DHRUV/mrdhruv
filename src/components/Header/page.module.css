@@ -85,8 +85,8 @@
   line-height: 20px;
   color: #828282;
   text-decoration: none;
-  -webkit-animation: wobble-hor-bottom 1s 2s 3 both;
-  animation: wobble-hor-bottom 1s 2s 3 both;
+  -webkit-animation: wobble-hor-bottom 1s 2s 2 both;
+  animation: wobble-hor-bottom 1s 2s 2 both;
 }
 
 .headerSocial:hover,

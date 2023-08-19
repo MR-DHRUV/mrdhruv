@@ -10,7 +10,7 @@ export interface cardProp {
     description: string;
     title: string;
     idx: string;
-    image:string;
+    image: string;
 }
 
 const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
@@ -27,18 +27,20 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                     </div>
                     <div className={styles.right}>
                         <Accordion.Header>
-                            <NavArrowDown width={20} height={20} color=''/>
+                            <NavArrowDown width={20} height={20} color='' />
                         </Accordion.Header>
                     </div>
                 </div>
                 {/* <p className={styles.p}>Jun 2020 - Mar 2021</p> */}
                 <Accordion.Body>
-                    {description}
-                </Accordion.Body> 
+                    {description.split('\n').map((item, idx) => (
+                        <li key={idx} className={styles.bullet}>{item}</li>
+                    ))}
+                </Accordion.Body>
             </Accordion.Item>
         </>
     );
-} 
+}
 
 export default Card;
 /*
