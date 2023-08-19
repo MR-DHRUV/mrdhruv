@@ -85,13 +85,14 @@
   line-height: 20px;
   color: #828282;
   text-decoration: none;
-  -webkit-animation: wobble-hor-bottom 1s 0.8s 5 both;
-  animation: wobble-hor-bottom 1s 0.8s 2 both;
+  -webkit-animation: wobble-hor-bottom 1s 2s 3 both;
+  animation: wobble-hor-bottom 1s 2s 3 both;
 }
 
 .headerSocial:hover,
 .headerBtn:hover {
   background-color: rgba(255, 255, 255, 0.705);
+  scale: 1.1;
 }
 
 .right {

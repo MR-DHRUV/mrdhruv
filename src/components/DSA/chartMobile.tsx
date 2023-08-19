@@ -2,10 +2,9 @@ import React, { PureComponent } from 'react';
 import { PieChart, Pie, Sector, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
-    { name: 'Group C', value: 300 },
-    { name: 'Group D', value: 200 },
+    { name: 'Easy', value: 260, },
+    { name: 'Medum', value: 388, },
+    { name: 'Hard', value: 89, },
 ];
 
 const COLORS = [' #4cb05b', '#ffcc55', '#f14d47'];
@@ -33,7 +32,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
 };
 
 
-export default function ChartMobile(props:any) {
+export default function ChartMobile(props: any) {
     return (
         <ResponsiveContainer width={277} height={315}>
             <PieChart>
