@@ -2,14 +2,14 @@
     {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
-        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nI utilised Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.",
+        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nLevraged Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.",
         "title": "SDE Intern",
         "image":"/static/rise.jpeg"
     },
     {
         "year": "2021-Present",
         "org": "SDC USICT",
-        "description": "Being SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes.\nI Led and managed the SFS team, driving significant progress in developing and maintaining the SFS portal.\nI administered a SQL-based database with feedback and academic data of 10000+ students and teachers across the university.",
+        "description": "Being SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes.\nLed and managed the SFS team, driving significant progress in developing and maintaining the SFS portal.\nAdministered a SQL-based database with feedback and academic data of 10000+ students and teachers across the university.",
         "title": "SFS Lead",
         "image":"/static/sdc.jpeg"
     },
