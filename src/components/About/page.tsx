@@ -31,7 +31,7 @@ export default function About() {
             </h1>
             <Tags />
             <p className={styles.description}>
-                I'm a skilled software developer with expertise in <strong>Next.js, React.js, and Node.js</strong>. With my strong knowledge of <strong>Data Structures and Algorithms</strong>, I love to optimize the performance and functionality of web apps. I possess a strong command of <strong>C, C++, and Python</strong>. I've worked on various projects for startups and campus clubs. Let's connect and weave our thoughts!
+                I&#39;m a skilled software developer with expertise in <strong>Next.js, React.js, and Node.js</strong>. With my strong knowledge of <strong>Data Structures and Algorithms</strong>, I love to optimize the performance and functionality of web apps. I possess a strong command of <strong>C, C++, and Python</strong>. I&#39;ve worked on various projects for startups and campus clubs. Let&#39;s connect and weave our thoughts!
             </p>
         </div>
     )

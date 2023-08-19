@@ -13,9 +13,7 @@ interface data {
         hard: number
     },
     platCount: {
-        platCount: {
-            [key: string]: number; // Index signature allows accessing properties with a string key
-        };
+        [key: string]: number; // Index signature allows accessing properties with a string key
     },
     streak: number
 }
@@ -31,9 +29,9 @@ export default function DSA() {
             hard: 88
         },
         platCount: {
-            gfg: 492,
-            leetcode: 106,
-            cn: 141
+            "gfg": 492,
+            "leetcode": 106,
+            "cn": 141
         },
         streak: 250
     });
@@ -92,7 +90,7 @@ export default function DSA() {
                 DSA
             </h2>
             <div className={styles.footer}>
-                <p className={styles.p}>Let's commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
+                <p className={styles.p}>Let&#39;s commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
             </div>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
