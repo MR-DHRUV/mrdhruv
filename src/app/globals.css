@@ -1362,6 +1362,10 @@
   border-radius: 10px !important;
 }
 
+.MuiButtonBase-root {
+  background-color: #000000 !important;
+}
+
 
 @media (prefers-reduced-motion:reduce) {
   .collapsing {
