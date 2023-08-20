@@ -88,7 +88,7 @@ export default function Contact() {
                     name="message"
                     className={styles.col}
                 />
-                <Button variant="contained" className={styles.submit} onClick={sendMsg} disabled={data.email.length < 10 || data.name.length < 2 || data.message.length < 10}>Send!</Button>
+                <Button variant="contained" className={styles.submit} onClick={sendMsg} disabled={data.email.length < 10 || data.name.length < 2 || data.message.length < 10} style={{backgroundColor:"#000000"}}>Send!</Button>
             </div>
         </div>
     )
