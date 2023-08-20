@@ -5,6 +5,7 @@ import ChartDesktop from "./chartDestop";
 import ChartMobile from "./chartMobile";
 import Image from "next/image";
 import Link from "next/link";
+import {url} from "../constants"
 
 interface data {
     catCount: {
@@ -18,22 +19,20 @@ interface data {
     streak: number
 }
 
-
-
 export default function DSA() {
 
     const [stats, setStats] = useState<data>({
         catCount: {
-            easy: 261,
-            medium: 390,
-            hard: 88
+            easy: 277,
+            medium: 430,
+            hard: 104
         },
         platCount: {
-            "gfg": 492,
-            "leetcode": 106,
+            "gfg": 543,
+            "leetcode": 129,
             "cn": 141
         },
-        streak: 250
+        streak: 261
     });
 
     const [chartData, setChartData] = useState([
@@ -49,7 +48,7 @@ export default function DSA() {
     ];
 
     const getData = async () => {
-        const response = await fetch('http://localhost:5000/dsa', {
+        const response = await fetch(`${url}/data`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -71,9 +70,9 @@ export default function DSA() {
 
     const [show, setShow] = useState(true);
 
-    // useEffect(() => {
-    //     getData();
-    // }, [])
+    useEffect(() => {
+        getData();
+    }, [])
 
     useEffect(() => {
         if (window.innerWidth >= 730) {
@@ -94,6 +93,7 @@ export default function DSA() {
             </div>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
+                <p>Problems :</p>
                     {platformInfo.map((platform) => (
                         <Link href={platform.link} target="_blank" key={platform.key} className={styles.item}>
                             <div className={styles.text}>
