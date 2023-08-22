@@ -111,7 +111,7 @@ export default function DSA() {
 
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
-                    <p className={styles.p}>Current POTD(Problem of The Day) Streak</p>
+                    <p className={styles.p}>Current POTD (Problem of The Day) Streak</p>
                     <p className={styles.p}>{stats.streak} / 365</p>
                 </div>
                 <div className={styles.statBar}>

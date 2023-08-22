@@ -12,34 +12,69 @@ export default function Contact() {
         email: "",
         message: "",
     })
+    const [error, setError] = useState({
+        name: "",
+        email: "",
+        message: "",
+    })
+
+    const validateMail = () => {
+        let errors = {};
+        let isValid = true;
+        if (!data.email) {
+          isValid = false;
+        } else if (!/\S+@\S+\.\S+/.test(data.email)) {
+          isValid = false;
+        }
+        return isValid;
+      };
 
     const [disable, setDisable] = useState(true)
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({ ...data, [e.target.name]: e.target.value });
 
-        if(data.email.length < 10 || data.name.length < 2 || data.message.length < 10){
+        if (data.email.length < 8 || data.name.length < 2 || data.message.length < 10) {
             setDisable(true);
         }
-        else{
+        else {
             setDisable(false);
         }
     };
 
-    const sendMsg = async () => {
-        const response = await fetch(`${url}/msg`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-            },
-            mode: "cors",
-            referrerPolicy: "origin-when-cross-origin",
-            body: JSON.stringify(data)
-        });
+    function validate(): boolean {
 
-        const json = await response.json();
-        console.log(json)
+        let isValid: boolean = true;
+        let err = {
+            name: "",
+            email: "",
+            message: "",
+        }
+
+        if (data.email.length < 8 || !validateMail()) {
+            isValid = false
+            err.email = "Please enter a valid email";
+        }
+        if (data.name.length < 2) {
+            isValid = false
+            err.name = "Please enter a valid name";
+        }
+        if (data.message.length < 10) {
+            isValid = false
+            err.message = "Please enter a valid message";
+        }
+
+        setError(err);
+        return isValid;
+    }
+
+    const sendMsg = async () => {
+
+        const valid = await validate();
+
+        if (!valid) {
+            return;
+        }
 
         Swal.fire({
             icon: 'success',
@@ -53,6 +88,24 @@ export default function Contact() {
             message: "",
         })
 
+        setError({
+            name: "",
+            email: "",
+            message: "",
+        })
+
+        const response = await fetch(`${url}/msg`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+            mode: "cors",
+            referrerPolicy: "origin-when-cross-origin",
+            body: JSON.stringify(data)
+        });
+
+        const json = await response.json();
     }
 
     return (
@@ -66,29 +119,34 @@ export default function Contact() {
             <div className={styles.form}>
                 <div className={styles.row}>
                     <TextField
+                        error={error.name.length > 0 ? true : false}
                         id="outlined-controlled"
-                        label="Name"
+                        label={error.name.length > 0 ? "Error" : "Name"}
                         size="small"
                         type="text"
                         value={data.name}
                         onChange={onChange}
                         name="name"
                         className={styles.col}
+                        helperText={error.name}
                     />
                     <TextField
+                        error={error.email.length > 0 ? true : false}
                         id="outlined-controlled"
-                        label="Email"
+                        label={error.email.length > 0 ? "Error" : "Email"}
                         type="email"
                         size="small"
                         value={data.email}
                         onChange={onChange}
                         name="email"
                         className={styles.col}
+                        helperText={error.email}
                     />
                 </div>
                 <TextField
+                    error={error.message.length > 0 ? true : false}
                     id="outlined-multiline-static"
-                    label="Message"
+                    label={error.message.length > 0 ? "Error" : "Message"}
                     multiline
                     rows={4}
                     defaultValue=""
@@ -96,8 +154,9 @@ export default function Contact() {
                     onChange={onChange}
                     name="message"
                     className={styles.col}
+                    helperText={error.message}
                 />
-                <Button variant="contained" className={styles.submit} onClick={sendMsg} disabled={disable} style={disable ? {backgroundColor:"#3c3c3c",color:"#ffffff"} : {backgroundColor:"#000000",color:"#ffffff"}}>Send!</Button>
+                <Button variant="contained" className={styles.submit} onClick={sendMsg} style={{ backgroundColor: "#000000", color: "#ffffff" }}>Send!</Button>
             </div>
         </div>
     )
