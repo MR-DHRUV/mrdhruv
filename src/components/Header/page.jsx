@@ -24,7 +24,7 @@ export default function Header() {
                         Dhruv Gupta
                     </h3>
                     <p className={styles.sub} id='typewriter'>
-                        <Typewriter text="Nerd on linkedin! Explorer on Instagram " />
+                        <Typewriter text="Just a nerd who travels frequently " />
                     </p>
                 </div>
             </div>
