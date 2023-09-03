@@ -1,4 +1,4 @@
-## My personal portfolio website: [`mrdhruv.xyz`](https://mrdhruv.xyz)
+## My personal portfolio website: [mrdhruv.xyz](https://mrdhruv.xyz)
 
 <div align="center">
   
