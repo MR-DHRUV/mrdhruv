@@ -21,7 +21,7 @@ export default function Home() {
         <Education />
         <Socials />
         <Experience />
-        <DSA />
+        {/* <DSA /> */}
         <Projects />
         <Hobbies />
         <Contact />
