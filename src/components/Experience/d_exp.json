@@ -2,7 +2,7 @@
     {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
-        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nLevraged Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.",
+        "description": "Designed and developed backend API from scratch using ExpressJS and MongoDB, implementing robust authentication and data services to enhance system security and facilitate seamless data management.\nLevraged Microsoft Azure to manage deployments and facilitate efficient user file uploads.\nDeveloped a user-friendly React application, ensuring smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a 3JS-based frontend solution that synchronizes characters’ lip movement seamlessly with the audio, creating a virtual avatar effect.",
         "title": "SDE Intern",
         "image":"/static/rise.jpeg"
     },
