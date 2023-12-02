@@ -23,16 +23,16 @@ export default function DSA() {
 
     const [stats, setStats] = useState<data>({
         catCount: {
-            easy: 277,
-            medium: 430,
-            hard: 104
+            easy: 352,
+            medium: 541,
+            hard: 152
         },
         platCount: {
-            "gfg": 543,
-            "leetcode": 129,
+            "gfg": 636,
+            "leetcode": 268,
             "cn": 141
         },
-        streak: 261
+        streak: 365
     });
 
     const [chartData, setChartData] = useState([
@@ -112,10 +112,10 @@ export default function DSA() {
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
                     <p className={styles.p}>Current POTD (Problem of The Day) Streak</p>
-                    <p className={styles.p}>{stats.streak} / 365</p>
+                    <p className={styles.p}>{stats.streak} / {(((stats.streak / 365) + 1) * 365)}</p>
                 </div>
                 <div className={styles.statBar}>
-                    <div className={styles.statPercentage} style={{ width: `${(stats.streak / 365) * 100}%` }} />
+                    <div className={styles.statPercentage} style={{ width: `${(stats.streak / (((stats.streak/365)+1)*365)) * 100}%` }} />
                 </div>
             </div>
         </div>
