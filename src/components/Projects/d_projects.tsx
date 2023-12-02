@@ -1,4 +1,5 @@
 import GppGoodIcon from '@mui/icons-material/GppGood';
+import NearMeIcon from '@mui/icons-material/NearMe';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
 import CloudIcon from '@mui/icons-material/Cloud';
 import TryIcon from '@mui/icons-material/Try';
@@ -15,6 +16,12 @@ export interface cardProp {
 const size = 22;
 
 const projectdata: cardProp[] = [
+    {
+        "url": "/pathfinding",
+        "name": "A* Pathfinding Visualizer",
+        "isLast": false,
+        "icon": <NearMeIcon width={size} height={size} />
+    },
     {
         "url": "/authify",
         "name": "Authify",
