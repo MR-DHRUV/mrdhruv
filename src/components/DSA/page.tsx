@@ -5,7 +5,7 @@ import ChartDesktop from "./chartDestop";
 import ChartMobile from "./chartMobile";
 import Image from "next/image";
 import Link from "next/link";
-import {url} from "../constants"
+import { url } from "../constants"
 
 interface data {
     catCount: {
@@ -93,7 +93,7 @@ export default function DSA() {
             </div>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
-                <p>Problems :</p>
+                    <p>Problems :</p>
                     {platformInfo.map((platform) => (
                         <Link href={platform.link} target="_blank" key={platform.key} className={styles.item}>
                             <div className={styles.text}>
@@ -112,10 +112,10 @@ export default function DSA() {
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
                     <p className={styles.p}>Current POTD (Problem of The Day) Streak</p>
-                    <p className={styles.p}>{stats.streak} / {(((stats.streak / 365) + 1) * 365)}</p>
+                    <p className={styles.p}>{stats.streak} / {((Math.ceil(stats.streak / 365)) * 365)}</p>
                 </div>
                 <div className={styles.statBar}>
-                    <div className={styles.statPercentage} style={{ width: `${(stats.streak / (((stats.streak/365)+1)*365)) * 100}%` }} />
+                    <div className={styles.statPercentage} style={{ width: `${(stats.streak / ((Math.ceil(stats.streak / 365)) * 365)) * 100}%` }} />
                 </div>
             </div>
         </div>
