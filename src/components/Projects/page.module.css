@@ -116,3 +116,9 @@
     line-height: 1.2em;
     width: max-content;
 }
+
+@media screen and (max-width: 460px) {
+    .pname{
+        max-width: 99px;
+    }
+}
