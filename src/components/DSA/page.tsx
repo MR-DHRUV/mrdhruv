@@ -86,7 +86,7 @@ export default function DSA() {
     return (
         <div className={styles.dsa}>
             <h2 className="section-heading">
-                DSA
+                DSA Wrapped
             </h2>
             <div className={styles.footer}>
                 <p className={styles.p}>Let&#39;s commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
