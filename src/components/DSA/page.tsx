@@ -52,7 +52,6 @@ export default function DSA() {
     ];
 
     const getData = async () => {
-        console.log(me)
         const response = await fetch(`${url}/data${me ? "?me=true" : ""}`, {
             method: "GET",
             headers: {
