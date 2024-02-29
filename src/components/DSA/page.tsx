@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from 'next/navigation'
 import styles from "./page.module.css"
 import ChartDesktop from "./chartDestop";
 import ChartMobile from "./chartMobile";
@@ -32,8 +33,11 @@ export default function DSA() {
             "leetcode": 268,
             "cn": 141
         },
-        streak: 365
+        streak: 420
     });
+
+    const searchParams = useSearchParams()
+    const me = searchParams.get('me')
 
     const [chartData, setChartData] = useState([
         { name: 'Easy', value: 260, },
@@ -48,7 +52,7 @@ export default function DSA() {
     ];
 
     const getData = async () => {
-        const response = await fetch(`${url}/data`, {
+        const response = await fetch(`${url}/data${me ? "?me=true" : ""}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
