@@ -2,21 +2,21 @@
     {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
-        "description": "Single-handedly built a comprehensive website from scratch, encompassing both frontend and backend development and brought the project from inception to completion in a duration of 6 months.\nConducted in-depth research to learn new teachnologies and optimize the website's development process and mentored other interns fostering a collaborative learning environment.\nDesigned and developed API from scratch using ExpressJS, MongoDB and utilizing DSA principles, implementing robust authentication and data services.\nLevraged Microsoft Azure to manage deployments and facilitate efficient user file management.\nDeveloped a user-friendly React application, delivering smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a 3JS-based frontend solution that synchronizes characters’ lip movement seamlessly with the audio, creating a virtual avatar effect.",
+        "description": "Single-handedly built a comprehensive website from scratch, encompassing both frontend and backend development, bringing the project from inception to completion in 6 months.\nDesigned and developed API from scratch using ExpressJS, MongoDB and utilized DSA principles, implementing robust authentication and data services.\nDeveloped a user-friendly React application, delivering smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a virtual counsellor in three.js with seamless lip-sync to audio playback, achieving a realistic virtual avatar effect.\nConducted in-depth research to optimize the development process, adopting new technologies and utilized Microsoft Azure to manage deployments and facilitate efficient user file management.\nMentored other interns fostering a collaborative learning environment.",
         "title": "SDE Intern",
         "image":"/static/rise.jpeg"
     },
     {
         "year": "2021-Present",
         "org": "SDC USICT",
-        "description": "Being SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes.\nLed and managed the SFS team, driving significant progress in developing and maintaining the SFS portal.\nAdministered a SQL-based database with feedback and academic data of 10000+ students and teachers across the university.",
+        "description": "Maintained and upheld the Student Feedback System (SFS): http://ipu.ac.in/sfs_main.php, facilitating annual feedback for university teachers.\nBeing SFS lead, I improved the student-feedback system’s scalability and security and reduced loading time by 30% through optimizations and necessary bug fixes.\nLed the SFS team, driving significant progress in developing and maintaining the student feedback system.\nAdministered a large SQL-based database housing feedback from 5000+ students for 500+ university teachers.",
         "title": "SFS Lead",
         "image":"/static/sdc.jpeg"
     },
     {
         "year": "2020-2021",
         "org": "InfoXpression USICT",
-        "description": "Created multiple scalable, intuitive and reusable react components for InfoXpression's website (The annual tech fest of GGSIPU, New Delhi).\nProgrammed a secure backend system for event registration, inspired by Devfolio, with seamless authentication and team management features that streamlined the participant registration and management process.",
+        "description": "Created multiple intuitive and reusable react components for InfoXpression's website (The annual  tech fest of GGSIPU, New Delhi).\nIndependently developed a secure backend system for event registration, drawing inspiration from Devfolio.\nImplemented robust authentication mechanisms and participant team management features within the backend system, ensuring a smooth registration process.",
         "title": "Full Stack Developer",
         "image":"/static/infox.jpeg"
     },
@@ -30,7 +30,7 @@
     {
         "year": "2020-2021",
         "org": "GDSC, USICT",
-        "description": "I conducted events on Git, GitHub, and Open Source which provided exposure to students on my campus.\nI also led a successful Hactoberfest'22 campaign, helping many students complete their contributions.",
+        "description": "I conducted events and workshops on Git, GitHub, and Open Source.\nOrganized and led a successful Hacktoberfest'22 campaign, guiding numerous students to fulfill their contributions.",
         "title": "Open Source Mentor",
         "image":"/static/gdsc.jpeg"
     }
