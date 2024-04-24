@@ -33,5 +33,12 @@
         "description": "I conducted events and workshops on Git, GitHub, and Open Source.\nOrganized and led a successful Hacktoberfest'22 campaign, guiding numerous students to fulfill their contributions.",
         "title": "Open Source Mentor",
         "image":"/static/gdsc.jpeg"
+    },
+    {
+        "year": "2020-2021",
+        "org": "Srijan Science Club, GGSIPU",
+        "description": "Created engaging multimedia content including videos, graphics, and written pieces to promote club events, initiatives, and achievements across various platforms.\nManaged the club's social media accounts by regularly updating content, responding to inquiries, and fostering online engagement with members and the broader university community.",
+        "title": "Media Head",
+        "image":"/static/ssc.jpg"
     }
 ]
