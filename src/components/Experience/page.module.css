@@ -91,8 +91,13 @@
 .img {
     border-radius: 4px;
 }
-.bullet::marker{
+
+.bullet::marker {
     color: #333333;
+}
+
+.bullet {
+    list-style-position: outside;
 }
 
 @media screen and (max-width : 600px) {

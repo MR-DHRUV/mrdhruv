@@ -33,9 +33,11 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                 </div>
                 {/* <p className={styles.p}>Jun 2020 - Mar 2021</p> */}
                 <Accordion.Body>
-                    {description.split('\n').map((item, idx) => (
-                        <li key={idx} className={styles.bullet}>{item}</li>
-                    ))}
+                    <ul>
+                        {description.split('\n').map((item, idx) => (
+                            <li key={idx} className={styles.bullet}>{item}</li>
+                        ))}
+                   </ul>
                 </Accordion.Body>
             </Accordion.Item>
         </>
