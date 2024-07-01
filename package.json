@@ -19,7 +19,7 @@
     "@types/react-dom": "18.2.7",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.13",
-    "framer-motion": "^10.15.2",
+    "framer-motion": "^10.18.0",
     "iconoir-react": "^6.11.0",
     "next": "13.4.13",
     "popmotion": "^11.0.5",

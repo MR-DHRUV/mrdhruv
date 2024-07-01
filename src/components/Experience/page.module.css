@@ -16,18 +16,7 @@
     flex-wrap: wrap;
     border-radius: 16px;
     border: 1px solid var(--gray_3, #9e9e9e);
-    animation: slide-up 0.5s ease-out forwards;
     z-index: 2;
-}
-
-@keyframes slide-up {
-    from {
-        transform: translateY(400%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
 }
 
 .item {

@@ -17,17 +17,6 @@
     flex-wrap: nowrap;
     border-radius: 16px;
     border: 1px solid var(--gray_3, #9e9e9e);
-    animation: slide-up 0.5s ease-out forwards;
-}
-
-@keyframes slide-up {
-    from {
-        transform: translateY(200%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
 }
 
 .item {
