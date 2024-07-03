@@ -1362,14 +1362,8 @@
   height: 65% !important;
 }
 
-.MuiInputBase-root {
+.MuiInputBase-root,  .MuiTextField-root, .MuiButtonBase-root {
   border-radius: 10px !important;
-}
-
-.MuiButtonBase-root {
-  /* background-color: #000000; */
-  border-radius: 10px !important;
-
 }
 
 .MuiButtonBase-root:hover{
