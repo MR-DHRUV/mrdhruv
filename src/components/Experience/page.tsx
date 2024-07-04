@@ -7,7 +7,7 @@ import expData from "./d_exp.json"
 
 export default function Experience() {
     return (
-        <div className={styles.experience}>
+        <div className="main-container bg-white">
             <h2 className="section-heading">
                 Experience
             </h2>

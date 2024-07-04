@@ -109,11 +109,11 @@ export default function Contact() {
     }
 
     return (
-        <div className={styles.container}>
+        <div className="main-container bg-white">
             <h2 className="section-heading">
                 Contact
             </h2>
-            <p className={styles.p}>
+            <p className="desc-ml text-start">
                 Scrolled till here! Well stop overthinking and contact me.
             </p>
             <div className={styles.form}>

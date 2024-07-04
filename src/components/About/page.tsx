@@ -17,20 +17,20 @@ export default function About() {
     }, [])
 
     return (
-        <div className={styles.about}>
-            <p className={styles.aboutHead}>About Me:</p>
-            <h1 className={styles.title}>
-                <span className={styles.muted}>
+        <div className="main-container bg-trans gap-16">
+            <p className="desc-s">About Me:</p>
+            <h1 className="heading-l">
+                <span className="text-muted">
                     {'{{'}
                 </span>
                 Software-Developer
-                <span className={styles.muted}>
+                <span className="text-muted">
                     {'}}'}
                 </span>
                 {show ? " 🚀" : ""}
             </h1>
             <Tags />
-            <p className={styles.description}>
+            <p className="desc-l">
                 I&#39;m a skilled software developer with expertise in <strong>Next.js, React.js, and Node.js</strong>. With my strong knowledge of <strong>Data Structures and Algorithms</strong>, I love to optimize the performance and functionality of web apps. I possess a strong command of <strong>C, C++, and Python</strong>. I&#39;ve worked on various projects for startups and campus clubs. Let&#39;s connect and weave our thoughts!
             </p>
         </div>

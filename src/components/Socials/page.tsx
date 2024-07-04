@@ -1,6 +1,4 @@
-"use client"
- 
-import { LinkedIn, Instagram, Mail, GitHub } from "iconoir-react"
+import { LinkedIn, Mail, GitHub } from "iconoir-react"
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import styles from "./page.module.css"
 import Link from "next/link"

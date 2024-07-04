@@ -10,7 +10,7 @@ import SailingIcon from '@mui/icons-material/Sailing';
 export default function Hobbies() {
     return (
         <div className={styles.container}>
-            <div className={styles.subcontainer}>
+            <div className="main-container main-container-sm bg-white">
                 <h2 className="section-heading">
                     Hobbies
                 </h2>
@@ -19,7 +19,7 @@ export default function Hobbies() {
                 <Card Icon={<SailingIcon width={22} height={22} />} h="Travelling" isLast={false} />
                 <Card Icon={<SportsTennisIcon width={22} height={22} />} h="Table Tennis" isLast={true} />
             </div>
-            <div className={styles.subcontainer}>
+            <div className="main-container main-container-sm bg-white">
                 {/* <Carousel /> */}
                 <iframe src="https://open.spotify.com/embed/playlist/39d35DN2b1DkxEc2obaXF9?utm_source=generator&theme=0" width="100%"  frameBorder="0" height="352px" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" allowFullScreen={false}></iframe>
             </div>

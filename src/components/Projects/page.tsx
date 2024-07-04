@@ -6,7 +6,7 @@ import projectData , {cardProp} from "./d_projects"
 
 export default function Projects() {
     return (
-        <div className={styles.experience}>
+        <div className="main-container bg-white">
             <h2 className="section-heading">
                 Projects
             </h2>

@@ -2,7 +2,6 @@
   height: 12%;
 }
 
-
 .gradientTop {
   width: 100vw;
   position: absolute;
@@ -13,7 +12,6 @@
 }
 
 .gradientbottom {
-  /* background: url("/gradient.png") no-repeat; */
   width: 100vw;
   z-index: 1;
   display: flex;

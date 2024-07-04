@@ -50,7 +50,6 @@ export default function Home() {
                     <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
                 </div>
             </div>
-            {/* <div className={styles.gradientbottom}></div> */}
         </>
     )
 }

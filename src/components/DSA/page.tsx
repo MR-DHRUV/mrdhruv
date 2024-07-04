@@ -88,12 +88,12 @@ export default function DSA() {
     }, [])
 
     return (
-        <div className={styles.dsa}>
+        <div className="main-container bg-white">
             <h2 className="section-heading">
                 DSA Wrapped
             </h2>
             <div className={styles.footer}>
-                <p className={styles.p}>Let&#39;s commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
+                <p className="desc-ml text-start">Let&#39;s commit together to solving at least one DSA problem every day, challenging our minds and strengthening our problem-solving skills. {show ? "With consistent effort, we'll not only master data structures and algorithms but also cultivate a disciplined and growth-oriented mindset." : ""}</p>
             </div>
             <div className={styles.container}>
                 <div className={styles.subcontainer}>
@@ -119,8 +119,8 @@ export default function DSA() {
 
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
-                    <p className={styles.p}>Current POTD (Problem of The Day) Streak</p>
-                    <p className={styles.p}>{stats.streak} / {((Math.ceil(stats.streak / 365)) * 365)}</p>
+                    <p className="desc-ml text-start">Current POTD (Problem of The Day) Streak</p>
+                    <p className="desc-ml text-start">{stats.streak} / {((Math.ceil(stats.streak / 365)) * 365)}</p>
                 </div>
                 <div className={styles.statBar}>
                     <div className={styles.statPercentage} style={{ width: `${(stats.streak / ((Math.ceil(stats.streak / 365)) * 365)) * 100}%` }} />
@@ -143,8 +143,8 @@ export default function DSA() {
                     {chartData.map((item, idx) => (
                         <div className={styles.statContainer} key={idx}>
                             <div className={styles.statHeader} >
-                                <p className={styles.p}>{item.name}</p>
-                                <p className={styles.p}>{item.value}</p>
+                                <p className="desc-ml text-start">{item.name}</p>
+                                <p className="desc-ml text-start">{item.value}</p>
                             </div>
                             <div className={styles.statBar}>
                                 <div className={styles.statPercentage} style={{ width: `${(item.value / stats.catCount.medium) * 100}%` }} />
@@ -157,8 +157,8 @@ export default function DSA() {
 
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
-                    <p className={styles.p}>Current POTD(Problem of The Day) Streak</p>
-                    <p className={styles.p}>{stats.streak} / 365</p>
+                    <p className="desc-ml text-start">Current POTD(Problem of The Day) Streak</p>
+                    <p className="desc-ml text-start">{stats.streak} / 365</p>
                 </div>
                 <div className={styles.statBar}>
                     <div className={styles.statPercentage} style={{ width: `${(stats.streak / 365) * 100}%` }} />

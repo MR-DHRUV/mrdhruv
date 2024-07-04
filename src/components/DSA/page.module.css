@@ -1,32 +1,3 @@
-.dsa {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 700px;
-    /* height: min-content; */
-    /* 287px */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 24px;
-    background-color: #ffffff;
-    overflow: visible;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    border-radius: 16px;
-    border: 1px solid var(--gray_3, #9e9e9e);
-}
-
-.p {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
-    font-size: 17.1px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px;
-    text-align: start;
-    color: #333333;
-}
-
 .container {
     display: flex;
     flex-direction: row;
@@ -134,7 +105,6 @@
     padding: 11px;
     cursor: pointer;
     text-decoration: none;
-
     webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;

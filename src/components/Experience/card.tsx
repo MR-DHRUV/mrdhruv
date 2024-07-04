@@ -21,8 +21,8 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                     <div className={styles.left}>
                         <Image src={image} alt="" height={32} width={32} className={styles.img} />
                         <div className={styles.text}>
-                            <p className={styles.role}>{title} @ </p>
-                            <p className={styles.company}>{org}</p>
+                            <p className="desc-m">{title} @ </p>
+                            <p>{org}</p>
                         </div>
                     </div>
                     <div className={styles.right}>
