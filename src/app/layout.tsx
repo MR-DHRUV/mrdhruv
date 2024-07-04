@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
     title: {
         default: 'Dhruv | Portfolio',
-        template: "%s | Dhruv" // %s will be replaced by the title of the page
+        template: "%s | Dhruv"
     },
     description: 'Dhruv Gupta | Software Developer | Student at USICT, Guru Gobind Singh Indraprastha University',
     openGraph: {
@@ -35,3 +35,5 @@ export default function RootLayout({
         </html>
     )
 } 
+
+// 18
