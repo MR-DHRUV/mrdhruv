@@ -5,25 +5,33 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Dhruv | Portfolio',
-  description: 'Dhruv Gupta | Software Developer | Student at USICT, Guru Gobind Singh Indraprastha University'
+    title: {
+        default: 'Dhruv | Portfolio',
+        template: "%s | Dhruv" // %s will be replaced by the title of the page
+    },
+    description: 'Dhruv Gupta | Software Developer | Student at USICT, Guru Gobind Singh Indraprastha University',
+    openGraph: {
+        url: 'https://mrdhruv.co',
+        title: 'Dhruv | Portfolio',
+        description: 'Dhruv Gupta | Software Developer | Student at USICT, Guru Gobind Singh Indraprastha University',
+        images: [{
+            url: 'https://mrdhruv.co/static/temp.jpg',
+        }],
+        type: 'website',
+        locale: 'en_US',
+    }
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-        <meta property="og:title" content="Dhruv | Portfolio" />
-        <meta property="og:description" content="Dhruv Gupta | Software Developer | Student at USICT, Guru Gobind Singh Indraprastha University" />
-        <meta property="og:image" content="/static/temp.jpg" />
-        <meta property="og:url" content="mrdhruv.xyz" />
-        <meta property="og:type" content="website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="language" content="en"/>
-      <body className={inter.className}>{children}</body>
-    </html>
-  )
+    return (
+        <html lang="en">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta name="language" content="en" />
+            <body className={inter.className}>{children}</body>
+        </html>
+    )
 } 
