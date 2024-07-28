@@ -1497,6 +1497,11 @@
     line-height: 38px;
 }
 
+
+.fw-med{
+    font-weight: 500 !important;
+}
+
 @media screen and (max-width : 600px) {
     .text-center-mq{
         width: 100%;
