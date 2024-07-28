@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import { LinkedIn, Mail, PageStar } from 'iconoir-react'
+import { PageStar } from 'iconoir-react'
 import Link from 'next/link'
 import styles from "./page.module.css"
 import Typewriter from "react-ts-typewriter";
@@ -24,7 +24,7 @@ export default function Header() {
                         Dhruv Gupta
                     </h3>
                     <p className={styles.sub} id='typewriter'>
-                        <Typewriter text="Just a nerd who travels frequently " />
+                        <Typewriter text="An avid traveler with a nerdy streak! " />
                     </p>
                 </div>
             </div>
