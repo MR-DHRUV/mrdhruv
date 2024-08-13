@@ -50,5 +50,13 @@
     {
         "name":"pathfinding",
         "link":"https://pathfinding-mr-dhruv.vercel.app/"
+    },
+    {
+        "name":"smoothy",
+        "link":"https://github.com/MR-DHRUV/Smoothy"
+    },
+    {
+        "name":"validator",
+        "link":"https://github.com/MR-DHRUV/HTML-Dom-Validator"
     }
 ]

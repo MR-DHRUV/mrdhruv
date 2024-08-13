@@ -1,10 +1,10 @@
 import GppGoodIcon from '@mui/icons-material/GppGood';
 import NearMeIcon from '@mui/icons-material/NearMe';
 import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
-import CloudIcon from '@mui/icons-material/Cloud';
 import TryIcon from '@mui/icons-material/Try';
 import { ReactNode } from 'react';
 import { PageEdit } from 'iconoir-react';
+import InterestsOutlinedIcon from '@mui/icons-material/InterestsOutlined';
 
 export interface cardProp {
     isLast: boolean;
@@ -41,16 +41,22 @@ const projectdata: cardProp[] = [
         "icon": <WorkspacePremiumIcon width={size} height={size} />
     },
     {
-        "url": "/mausam",
-        "name": "Mausam",
+        "url": "/validator",
+        "name": "HTML Dom Validator",
         "isLast": false,
-        "icon": <CloudIcon width={size} height={size} />
+        "icon": <WorkspacePremiumIcon width={size} height={size} />
     },
     {
         "url": "/notify",
         "name": "Notify",
-        "isLast": true,
+        "isLast": false,
         "icon": <PageEdit width={size} height={size} />
+    },
+    {
+        "url": "/smoothy",
+        "name": "Smoothy",
+        "isLast": true,
+        "icon": <InterestsOutlinedIcon width={size} height={size} />
     }
 ]
 
