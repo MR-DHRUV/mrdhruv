@@ -1,7 +1,5 @@
-import Link from "next/link"
-import styles from "./page.module.css"
 import Card from "./card"
-import projectData , {cardProp} from "./d_projects"
+import projectData from "./d_projects"
 
 
 export default function Projects() {

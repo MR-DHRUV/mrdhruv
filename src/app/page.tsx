@@ -11,7 +11,6 @@ import DSA from '@/components/DSA/page'
 import Contact from '@/components/Contact/page'
 import Skills from '@/components/Skills/page'
 import Reveal from "./Reveal"
-
 export default function Home() {
     return (
         <>
@@ -29,12 +28,12 @@ export default function Home() {
                 <Reveal>
                     <Socials />
                 </Reveal>
-                {/* <Reveal>
-                    <Skills />
-                </Reveal> */}
                 <Reveal>
                     <Experience />
                 </Reveal>
+                <Reveal>
+                    <Skills />
+                </Reveal> 
                 <Reveal>
                     <DSA />
                 </Reveal>
@@ -47,7 +46,7 @@ export default function Home() {
                 <Reveal>
                     <Contact />
                 </Reveal>
-
+                
                 <div className={styles.gradientbottom}>
                     <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
                 </div>

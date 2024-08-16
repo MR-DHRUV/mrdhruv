@@ -9,8 +9,8 @@ export default function Skills() {
                 Skills
             </h2>
             {Object.keys(skills).map((key:string) => (
-                <div className={styles.item} key={key}>
-                    <p>{key}:</p>
+                <div className={styles.item} key={key} id={key}>
+                    <p className="text-start">{key}:</p>
                     <div className={styles.icons}>
                         {skills[key].map(({Icon,text},idx:any) => (
                             <Chip Icon={Icon} text={text} key={idx} />

@@ -29,20 +29,20 @@ export default function DSA() {
             hard: 152
         },
         platCount: {
-            "gfg": 636,
-            "leetcode": 268,
+            "gfg": 883,
+            "leetcode": 678,
             "cn": 141
         },
-        streak: 420
+        streak: 622
     });
 
     const searchParams = useSearchParams()
     const me = searchParams.get('me')
 
     const [chartData, setChartData] = useState([
-        { name: 'Easy', value: 260, },
-        { name: 'Medum', value: 388, },
-        { name: 'Hard', value: 89, },
+        { name: 'Easy', value: 569, },
+        { name: 'Medum', value: 883, },
+        { name: 'Hard', value: 250, },
     ])
 
     const platformInfo = [
@@ -119,8 +119,8 @@ export default function DSA() {
 
             <div className={styles.statContainer}>
                 <div className={styles.statHeader} >
-                    <p className="desc-ml text-start">Current POTD (Problem of The Day) Streak</p>
-                    <p className="desc-ml text-start">{stats.streak} / {((Math.ceil(stats.streak / 365)) * 365)}</p>
+                    <p className="desc-ml text-start">Problem of The Day Streak</p>
+                    <p className="desc-ml text-start">{stats.streak}/{((Math.ceil(stats.streak / 365)) * 365)} days</p>
                 </div>
                 <div className={styles.statBar}>
                     <div className={styles.statPercentage} style={{ width: `${(stats.streak / ((Math.ceil(stats.streak / 365)) * 365)) * 100}%` }} />

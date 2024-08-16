@@ -5,6 +5,7 @@ import TryIcon from '@mui/icons-material/Try';
 import { ReactNode } from 'react';
 import { PageEdit } from 'iconoir-react';
 import InterestsOutlinedIcon from '@mui/icons-material/InterestsOutlined';
+import { Code } from '@mui/icons-material';
 
 export interface cardProp {
     isLast: boolean;
@@ -44,7 +45,7 @@ const projectdata: cardProp[] = [
         "url": "/validator",
         "name": "HTML Dom Validator",
         "isLast": false,
-        "icon": <WorkspacePremiumIcon width={size} height={size} />
+        "icon": <Code width={size} height={size} />
     },
     {
         "url": "/notify",

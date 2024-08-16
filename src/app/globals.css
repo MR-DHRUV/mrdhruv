@@ -1440,11 +1440,11 @@
     color: var(--gray_3, #9e9e9e);
 }
 
-.text-start{
+.text-start {
     text-align: start;
 }
 
-.text-end{
+.text-end {
     text-align: end;
 }
 
@@ -1498,13 +1498,17 @@
 }
 
 
-.fw-med{
+.fw-med {
     font-weight: 500 !important;
 }
 
 @media screen and (max-width : 600px) {
-    .text-center-mq{
+    .text-center-mq {
         width: 100%;
         text-align: center;
+    }
+
+    #Coursework {
+        display: none !important;
     }
 }
