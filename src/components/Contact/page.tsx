@@ -7,37 +7,22 @@ import Swal from 'sweetalert2'
 
 export default function Contact() {
 
-    const [data, setData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    })
-    const [error, setError] = useState({
-        name: "",
-        email: "",
-        message: "",
-    })
+    const [data, setData] = useState({ name: "", email: "", message: "", })
+    const [error, setError] = useState({ name: "", email: "", message: "", })
 
     const validateMail = () => {
         let isValid = true;
         if (!data.email) {
-          isValid = false;
+            isValid = false;
         } else if (!/\S+@\S+\.\S+/.test(data.email)) {
-          isValid = false;
+            isValid = false;
         }
         return isValid;
-      };
+    };
 
-    const [disable, setDisable] = useState(true)
+    const [disable, setDisable] = useState(false)
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({ ...data, [e.target.name]: e.target.value });
-
-        if (data.email.length < 8 || data.name.length < 2 || data.message.length < 10) {
-            setDisable(true);
-        }
-        else {
-            setDisable(false);
-        }
     };
 
     function validate(): boolean {
@@ -79,16 +64,8 @@ export default function Contact() {
             text: "Thanks for contacting me, I'll respond shortly.",
         })
 
-        setData({
-            name: "",
-            email: "",
-            message: "",
-        })
-        setError({
-            name: "",
-            email: "",
-            message: "",
-        })
+        setData({ name: "", email: "", message: "", })
+        setError({ name: "", email: "", message: "", })
 
         const response = await fetch(`${url}/msg`, {
             method: "POST",
@@ -102,6 +79,9 @@ export default function Contact() {
         });
 
         const json = await response.json();
+        if (json?.success) {
+            setDisable(true);
+        }
     }
 
     return (
@@ -152,7 +132,7 @@ export default function Contact() {
                     className={styles.col}
                     helperText={error.message}
                 />
-                <Button variant="contained" className={styles.submit} onClick={sendMsg} style={{ backgroundColor: "#000000", color: "#ffffff" }}>Send!</Button>
+                <Button variant="contained" className={styles.submit} onClick={sendMsg} disabled={disable} style={{ backgroundColor: "#000000", color: "#ffffff" }}>Send!</Button>
             </div>
         </div>
     )

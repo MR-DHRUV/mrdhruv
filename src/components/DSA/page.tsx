@@ -36,8 +36,9 @@ export default function DSA() {
         streak: 622
     });
 
-    const searchParams = useSearchParams()
-    const me = searchParams.get('me')
+    // const searchParams = useSearchParams()
+    // const me = searchParams.get('me')
+    const me = false;
 
     const [chartData, setChartData] = useState([
         { name: 'Easy', value: 569, },
@@ -48,7 +49,7 @@ export default function DSA() {
     const platformInfo = [
         { name: 'GeeksForGeeks', imageSrc: 'https://media.geeksforgeeks.org/gfg-gg-logo.svg', key: 'gfg', link: "/gfg" },
         { name: 'Leetcode', imageSrc: '/static/leetcode.png', key: 'leetcode', link: "/leetcode" },
-        { name: 'Coding Ninjas', imageSrc: '/static/cn.png', key: 'cn', link: "/cn" },
+        { name: 'Other Platforms', imageSrc: '/static/others.svg', key: 'cn', link: "/" },
     ];
 
     const getData = async () => {
@@ -99,14 +100,14 @@ export default function DSA() {
                 <div className={styles.subcontainer}>
                     <p>Problems :</p>
                     {platformInfo.map((platform) => (
-                        <Link href={platform.link} target="_blank" key={platform.key} className={styles.item}>
+                        <Link href={platform.link} target={platform.name !== "Other Platforms" ? "_blank" : "_self"} key={platform.key} className={styles.item}>
                             <div className={styles.text}>
                                 <Image src={platform.imageSrc} alt={platform.name} width={35} height={35} />
                                 <p className={styles.platName}>{platform.name}</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#007acc" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                                </svg>
+                                {platform.name !== "Other Platforms" ? <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#007acc" viewBox="0 0 16 16">
+                                    <path fillRule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                                    <path fillRule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                                </svg> : null}
                             </div>
                             <h4 className={styles.platCount}>{stats.platCount[platform.key]}</h4>
                         </Link>
@@ -129,89 +130,3 @@ export default function DSA() {
         </div>
     )
 }
-
-
-
-/* 
-<div className={styles.dsa}>
-            <h2 className="section-heading">
-                DSA
-            </h2>
-
-            <div className={styles.container}>
-                <div className={styles.subcontainer}>
-                    {chartData.map((item, idx) => (
-                        <div className={styles.statContainer} key={idx}>
-                            <div className={styles.statHeader} >
-                                <p className="desc-ml text-start">{item.name}</p>
-                                <p className="desc-ml text-start">{item.value}</p>
-                            </div>
-                            <div className={styles.statBar}>
-                                <div className={styles.statPercentage} style={{ width: `${(item.value / stats.catCount.medium) * 100}%` }} />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <Chart data={chartData} />
-            </div>
-
-            <div className={styles.statContainer}>
-                <div className={styles.statHeader} >
-                    <p className="desc-ml text-start">Current POTD(Problem of The Day) Streak</p>
-                    <p className="desc-ml text-start">{stats.streak} / 365</p>
-                </div>
-                <div className={styles.statBar}>
-                    <div className={styles.statPercentage} style={{ width: `${(stats.streak / 365) * 100}%` }} />
-                </div>
-            </div>
-
-            <div className={styles.platform}>
-                <div className={styles.platContainer}>
-                    <Image src="https://media.geeksforgeeks.org/gfg-gg-logo.svg" alt="gfg" width={50} height={50} />
-                    <p className={styles.platName}>GeeksForGeeks</p>
-                    <h4 className={styles.platCount}>{stats.platCount.gfg}</h4>
-                </div>
-                <div className={styles.platContainer}>
-                    <Image src="/static/leetcode.png" alt="leetcode" width={50} height={50} />
-                    <p className={styles.platName}>LeetCode</p>
-                    <h4 className={styles.platCount}>{stats.platCount.leetcode}</h4>
-                </div>
-                <div className={styles.platContainer}>
-                    <Image src="/static/cn.png" alt="cn" width={30} height={30} />
-                    <p className={styles.platName}>CodingNinjas</p>
-                    <h4 className={styles.platCount}>{stats.platCount.cn}</h4>
-                </div>
-            </div>
-        </div>
-*/
-/*
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-background-color: #d9d9d97d;
-border-radius: 16px;
-padding: 20px;
-justify-content: center;
-align-items: center;
-gap: 0.5rem;
-height: 190px;
-
-
-
-.page_platform__r1rMt {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 20px;
-  gap: 20px;
-  max-width: 700px;
-  border: 1px solid rgb(158, 158, 158);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.01);
-  padding: 20px;
-  padding: 20px 20px;
-  border-radius: 16px;
-*/

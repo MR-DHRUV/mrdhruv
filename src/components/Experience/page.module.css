@@ -17,7 +17,6 @@
     flex-wrap: nowrap;
     gap: 8px;
     justify-content: flex-start;
-    width: min-content;
 }
 
 .text {

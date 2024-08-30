@@ -3,15 +3,8 @@ import Image from 'next/image'
 import { PageStar } from 'iconoir-react'
 import Link from 'next/link'
 import styles from "./page.module.css"
-import Typewriter from "react-ts-typewriter";
 
 export default function Header() {
-
-    // hide cursor 
-    setTimeout(() => {
-        document.querySelector('#typewriter span span').style.display = 'none';
-    }, 4100);
-
     return (
         <div className={styles.header}>
             <div className={styles.left}>
@@ -19,12 +12,10 @@ export default function Header() {
                     <Image src={"/static/temp.jpg"} alt='Dhruv' height={64} width={64} className={styles.headerImage} unoptimized />
                 </div>
                 <div className={styles.textDiv}>
-                    <h3 className={styles.name}>
-                        Dhruv Gupta
-                    </h3>
-                    <p className={styles.sub} id='typewriter'>
-                        <Typewriter text="An avid traveler with a nerdy streak! " />
-                    </p>
+                    <Link href="/" className={styles.name}>Dhruv Gupta</Link>
+                    <div className="css-typing">
+                        <p className={styles.sub}>An avid traveler with a nerdy streak! </p>
+                    </div>
                 </div>
             </div>
             <div className={styles.right}>

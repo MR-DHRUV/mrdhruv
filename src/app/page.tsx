@@ -1,55 +1,30 @@
-"use client";
 import About from '@/components/About/page'
 import Experience from '@/components/Experience/page'
 import Projects from '@/components/Projects/page'
 import Hobbies from '@/components/Hobbies/page'
-import Header from '@/components/Header/page'
-import styles from "./page.module.css"
 import Education from '@/components/Education/page'
 import Socials from '@/components/Socials/page'
 import DSA from '@/components/DSA/page'
 import Contact from '@/components/Contact/page'
-import Skills from '@/components/Skills/page'
-import Reveal from "./Reveal"
+import styles from './layout.module.css'
+import Image from 'next/image'
+
 export default function Home() {
     return (
         <>
-            <div className={styles.mainContainer}>
-                <div className={styles.gradientTop}>
-                    <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
-                </div>
-                <Header />
-                <Reveal>
-                    <About />
-                </Reveal>
-                <Reveal>
-                    <Education />
-                </Reveal>
-                <Reveal>
-                    <Socials />
-                </Reveal>
-                <Reveal>
-                    <Experience />
-                </Reveal>
-                {/* <Reveal>
-                    <Skills />
-                </Reveal>  */}
-                <Reveal>
-                    <DSA />
-                </Reveal>
-                <Reveal>
-                    <Projects />
-                </Reveal>
-                <Reveal>
-                    <Hobbies />
-                </Reveal>
-                <Reveal>
-                    <Contact />
-                </Reveal>
-                
-                <div className={styles.gradientbottom}>
-                    <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
-                </div>
+            <div className={styles.gradientTop}>
+                <Image src="/static/gradient.png" alt="gradient" className={styles.gradient} width={759} height={233}/>
+            </div>
+            <About />
+            <Education />
+            <Socials />
+            <Experience />
+            <DSA />
+            <Projects />
+            <Hobbies />
+            <Contact />
+            <div className={styles.gradientbottom}>
+                <Image src="/static/gradient.png" alt="gradient" className={styles.gradient} width={759} height={233} />
             </div>
         </>
     )

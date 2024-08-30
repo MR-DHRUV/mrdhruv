@@ -1,4 +1,3 @@
-"use client";
 import Accordion from 'react-bootstrap/Accordion';
 import styles from "./page.module.css"
 import { NavArrowDown } from 'iconoir-react';
@@ -22,7 +21,7 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                         <Image src={image} alt="" height={32} width={32} className={styles.img} />
                         <div className={styles.text}>
                             <p className="desc-m">{title} @ </p>
-                            <p>{org}</p>
+                            <p className='inter'>{org}</p>
                         </div>
                     </div>
                     <div className={styles.right}>
@@ -31,7 +30,6 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                         </Accordion.Header>
                     </div>
                 </div>
-                {/* <p className={styles.p}>Jun 2020 - Mar 2021</p> */}
                 <Accordion.Body>
                     <ul>
                         {description.split('\n').map((item, idx) => (
@@ -45,17 +43,3 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
 }
 
 export default Card;
-/*
-<div className={styles.item}>
-                <div className={styles.left}>
-                    <img src="https://framerusercontent.com/images/N5rprPMr8Dla8ieNGX7xilNHgM.png" alt="" height={32} className={styles.img}/>
-                    <div className={styles.text}>
-                        <p className={styles.role}>Art Director @ </p>
-                        <p className={styles.company}>IBM</p>
-                    </div>
-                </div>
-                <div className={styles.right}>
-                    <p className={styles.p}>Jun 2020 - Mar 2021</p>
-                </div>
-            </div>
-*/

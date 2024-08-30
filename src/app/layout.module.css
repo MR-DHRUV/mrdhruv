@@ -37,6 +37,7 @@
   overflow: hidden;
   padding: 24px 24px 104px;
   position: relative;
+  max-width: 700px !important;
 }
 
 
