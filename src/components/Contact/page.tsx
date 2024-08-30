@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css"
 import { TextField, Button } from "@mui/material";
 import { url } from '../constants'
@@ -19,7 +19,6 @@ export default function Contact() {
     })
 
     const validateMail = () => {
-        let errors = {};
         let isValid = true;
         if (!data.email) {
           isValid = false;
@@ -30,7 +29,6 @@ export default function Contact() {
       };
 
     const [disable, setDisable] = useState(true)
-
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setData({ ...data, [e.target.name]: e.target.value });
 
@@ -71,7 +69,6 @@ export default function Contact() {
     const sendMsg = async () => {
 
         const valid = await validate();
-
         if (!valid) {
             return;
         }
@@ -87,7 +84,6 @@ export default function Contact() {
             email: "",
             message: "",
         })
-
         setError({
             name: "",
             email: "",

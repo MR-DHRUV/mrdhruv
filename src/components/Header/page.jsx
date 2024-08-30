@@ -1,4 +1,3 @@
-"use client";
 import React from 'react'
 import Image from 'next/image'
 import { PageStar } from 'iconoir-react'
@@ -31,7 +30,7 @@ export default function Header() {
             <div className={styles.right}>
                 <Link href='/resume' target="_blank" className={styles.headerBtn} >
                     <PageStar width={24} height={24} color='rgb(158, 158, 158)' />
-                    <p>
+                    <p className='fw-med'>
                         Résumé
                     </p>
                 </Link>

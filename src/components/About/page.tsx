@@ -1,21 +1,6 @@
-"use client";
-import styles from "./page.module.css"
 import Tags from "./tags"
-import { useState, useEffect } from 'react'
 
 export default function About() {
-
-    const [show, setShow] = useState(false);
-
-    useEffect(() => {
-        if (window.innerWidth > 600) {
-            setShow(true);
-        }
-        else {
-            setShow(false);
-        }
-    }, [])
-
     return (
         <div className="main-container bg-trans gap-16">
             <p className="desc-s">About Me:</p>
@@ -27,7 +12,7 @@ export default function About() {
                 <span className="text-muted">
                     {'}}'}
                 </span>
-                {show ? " 🚀" : ""}
+                <span className="d-m-none"> 🚀</span>
             </h1>
             <Tags />
             <p className="desc-l">
