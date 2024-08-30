@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     word-wrap: break-word;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
 }
 
 *:focus-visible,
@@ -258,7 +260,7 @@
         display: none !important;
     }
 
-    .d-m-none{
+    .d-m-none {
         display: none !important;
     }
 }

@@ -13,7 +13,7 @@ import Skills from '@/components/Skills/page'
 import Reveal from "./Reveal"
 export default function Home() {
     return (
-        <>
+        <div className='!bg-slate-900'>
             <div className={styles.mainContainer}>
                 <div className={styles.gradientTop}>
                     <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
@@ -51,7 +51,7 @@ export default function Home() {
                     <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
