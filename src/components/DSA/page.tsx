@@ -36,8 +36,9 @@ export default function DSA() {
         streak: 622
     });
 
-    const searchParams = useSearchParams()
-    const me = searchParams.get('me')
+    // const searchParams = useSearchParams()
+    // const me = searchParams.get('me')
+    const me = false;
 
     const [chartData, setChartData] = useState([
         { name: 'Easy', value: 569, },
