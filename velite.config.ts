@@ -18,7 +18,12 @@ const projects = defineCollection({
     schema: s.object({
         slug: s.path(), // slug is the file path
         title: s.string(), // title of the project
+        description: s.string(),
         body: s.mdx(),
+        tags: s.array(s.string()),
+        github: s.string(),
+        deployment: s.string().optional(),
+        image: s.string(),
     }).transform(computedFields),
 });
 
@@ -46,7 +51,7 @@ export default defineConfig({
     },
     collections: { blogs, projects },
     mdx: {
-        rehypePlugins: [rehypeSlug, [rehypePrettyCode, {theme: 'github-dark'}], [rehypeAutoLinkHeadings, {behavior: 'wrap', properties: {className: 'subheading-anchor'}, ariaLabel:"Link to section"}]],
+        rehypePlugins: [rehypeSlug, [rehypePrettyCode, { theme: 'one-dark-pro'}], [rehypeAutoLinkHeadings, {behavior: 'wrap', properties: {className: 'subheading-anchor'}, ariaLabel:"Link to section"}]],
         remarkPlugins: [],
     }
 });

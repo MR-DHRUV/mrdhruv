@@ -1,126 +1,129 @@
 .header {
-  width: 100%;
-  max-width: 700px;
-  z-index: 2;
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  height: min-content;
-  justify-content: space-between;
-  /* margin-top: 26px; */
+    width: 100%;
+    max-width: 700px;
+    z-index: 2;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: min-content;
+    justify-content: space-between;
+    /* margin-top: 26px; */
 }
 
 .left {
-  max-width: 282px;
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  height: min-content;
-  justify-content: flex-start;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  width: max-content;
+    max-width: 282px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: max-content;
 }
 
 .name {
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.2em;
-  color: #000000;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2em;
+    color: #000000;
 }
 
 .name:hover {
-  text-decoration: underline;
-  cursor: pointer;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .sub {
-  font-family: "IBM Plex Sans Condensed", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0em;
-  line-height: 20px;
-  text-align: start;
-  color: #828282;
-  text-decoration: none;
-  text-transform: none;
-  width: max-content;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0em;
+    line-height: 20px;
+    text-align: start;
+    color: #828282;
+    text-decoration: none;
+    text-transform: none;
+    width: max-content;
 }
 
 .headerImage {
-  border-radius: 50%;
+    border-radius: 50% !important;
+    height: 64px !important;
+    width: 64px !important;
+    max-width: max-content !important;
 }
 
 .headerSocial {
-  padding: 8px;
-  border: 1px solid rgb(158, 158, 158);
-  border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.01);
-  align-items: center;
-  align-content: center;
-  display: flex;
+    padding: 8px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.01);
+    align-items: center;
+    align-content: center;
+    display: flex;
 }
 
 .headerBtn {
-  padding: 8px;
-  border: 1px solid rgb(158, 158, 158);
-  border-radius: 16px;
-  background-color: rgba(255, 255, 255, 0.01);
-  align-items: center;
-  align-content: center;
-  display: flex;
-  gap: 6px;
-  font-family: "IBM Plex Mono", sans-serif;
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 20px;
-  color: #828282;
-  text-decoration: none;
+    padding: 8px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.01);
+    align-items: center;
+    align-content: center;
+    display: flex;
+    gap: 6px;
+    font-family: "IBM Plex Mono", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #828282;
+    text-decoration: none;
 }
 
 .headerSocial:hover,
 .headerBtn:hover {
-  background-color: rgba(255, 255, 255, 0.705);
-  scale: 1.1;
+    background-color: rgba(255, 255, 255, 0.705);
+    scale: 1.1;
 }
 
 .right {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex: none;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 8px;
-  height: min-content;
-  justify-content: flex-start;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  width: min-content;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    height: min-content;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: min-content;
 }
 
 @media screen and (max-width : 600px) {
-  .header {
-    flex-direction: column;
-  }
+    .header {
+        flex-direction: column;
+    }
 
-  .left {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.6rem;
-  }
+    .left {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.6rem;
+    }
 
-  .sub,
-  .name {
-    text-align: center;
-  }
+    .sub,
+    .name {
+        text-align: center;
+    }
 }

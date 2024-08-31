@@ -1,0 +1,400 @@
+---
+title: "Authify"
+description: Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and curve completion. It is applied in real-world scenarios to recognize and transform hand-drawn shapes into precise geometric forms, even completing missing segments.
+tags: ["Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth"]
+github: "https://github.com/MR-DHRUV/smoothy"
+deployment: "https://github.com/MR-DHRUV/smoothy"
+image: "/static/project_1.png"
+---
+
+
+# Authify : The Authentication API
+Secure, complete and hassle free **authentication solution** for your applications
+
+## Features
+
+- Signup using Email and generation of unique JWT token.
+- Signin
+- Fetching User details from JWT token.
+- Reseting Password via OTP on corresponding Email address.
+- Authentication using Google.
+- Deletion of account
+- **Instant Updates on email for all account activity like login ,  change of password, and etc**
+
+# Endpoints
+
+### Signup
+
+#### I Sending OTP to given email address:
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/signup/email
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `email`    | `string` | **Required** Email Address                 |
+
+#### Usage
+
+javascript:
+
+```javascript
+const createNewUserViaEmail = await fetch('https://api-authify.herokuapp.auth/signup/email', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email: credentials.email})
+});
+const json = await createNewUserViaEmail.json();
+console.log(json);
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+}
+
+```
+
+#### II Verivication and creation of a new user:
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/signup/email/verify
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `name`     | `string` | **Required** Name (min length : 3)     |
+| `email`    | `string` | **Required** Email add                 |
+| `password` | `string` | **Required** password (min length : 8) |
+| `authcode` | `number` | **Required** password (length : 6) |
+
+#### Usage
+
+javascript:
+
+```javascript
+const createNewUser = await fetch(
+  "https://api-authify.azurewebsites.net/auth/signup",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: credentials.name,
+      email: credentials.email,
+      password: credentials.password,
+      authcode: credentials.authCode
+    }),
+  }
+);
+const response = await createNewUser.json();
+console.log(json);
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+  "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MjljN2YzYWVmMzEwNjg4N2EyYWNkZDAifSwiaWF0IjoxNjU0NDIzMzU1fQ.R1rX4sRHv-o3gDWT3XqtobYEKeYRmyvA8ZLpveobuGc"
+}
+
+```
+
+### Signin
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/signin
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `email`    | `string` | **Required** Email address             |
+| `password` | `string` | **Required** password (min length : 8) |
+
+#### Usage
+
+javascript:
+
+```javascript
+const signInUser = await fetch(
+  "https://api-authify.azurewebsites.net/auth/signin",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: credentials.email,
+      password: credentials.password,
+    }),
+  }
+);
+const response = await signInUser.json();
+console.log(json);
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+  "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MjljN2YzYWVmMzEwNjg4N2EyYWNkZDAifSwiaWF0IjoxNjU0NDIzMzU1fQ.R1rX4sRHv-o3gDWT3XqtobYEKeYRmyvA8ZLpveobuGc"
+}
+
+```
+
+### Fetch User details from token \ Verification
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/verifyuser
+```
+
+#### Header :
+
+| Parameter      | Type     | Description                                                                                                                                                                       |
+| :------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Content-Type` | `string` | **Required** application/json                                                                                                                                                    |
+| `auth-token`   | `string` | **Required** eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1..... |
+
+#### Usage
+
+javascript:
+
+```javascript
+const getUser = await fetch(
+  "https://api-authify.azurewebsites.net/auth/verifyuser",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "auth-token":
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MjljN2YzYWVmMzEwNjg4N2EyYWNkZDAifSwiaWF0IjoxNjU0NDIzMzU1fQ.R1rX4sRHv-o3gDWT3XqtobYEKeYRmyvA8ZLpveobuGc",
+    },
+  }
+);
+const response = await getUser.json();
+console.log(json);
+```
+
+#### response
+
+```javascript
+{
+  "_id": "629c7f3aef3106887a2acdd0",
+  "name": "user",
+  "email": "userEmail@fudnef.com",
+  "googleId": null,
+  "date": "2022-06-05T10:02:34.938Z",
+  "__v": 0
+}
+
+```
+
+### Reseting password
+Can be used for both resetting the password and updation of password
+
+#### I : Sending OTP to corresponding Email address
+
+```js
+  POST https://api-authify.azurewebsites.net/fogotpassword
+```
+
+#### Body :
+
+| Parameter | Type     | Description                 |
+| :-------- | :------- | :-------------------------- |
+| `email`   | `string` | **Required**. Email address |
+
+#### Usage
+
+javascript:
+
+```javascript
+const sendMail = await fetch(
+  "https://api-authify.azurewebsites.net/fogotpassword",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email: credentials.email }),
+  }
+);
+
+const response = await sendMail.json();
+console.log(response);
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+  "message": "Email Send"
+}
+
+```
+
+### II : OTP verification and updating new password
+
+```js
+  POST https://api-authify.azurewebsites.net/fogotpassword/verify
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                                 |
+| :--------- | :------- | :------------------------------------------ |
+| `email`    | `string` | **Required**. Email address                 |
+| `authcode` | `number` | **Required**. OTP (6 digit)                 |
+| `password` | `string` | **Required**. new password (min length : 8) |
+
+#### Usage
+
+javascript:
+
+```javascript
+const changePassword = await fetch(
+  "https://api-authify.azurewebsites.net/fogotpassword/verify",
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: credentials.email,
+      authcode: Number(credentials.OTP),
+      password: credentials.password,
+    }),
+  }
+);
+
+const response = await changePassword.json();
+```
+
+#### response
+
+```javascript
+{
+    "success" : true ,
+    "msg" : "Password Updated"
+}
+
+```
+
+### Authentication with Google
+
+To authenticate with google, you need to pass your app url as a query parameter in the url. Once the user authenticates with google, the user will be redirected to the app url with the auth token as a query parameter. You can fetch the token from the url and use it for further authentication.
+
+```http
+  PUT https://api-authify.azurewebsites.net/auth/google?url={YOUR_APP_URL}
+```
+
+#### Usage
+
+html:
+```html
+<!-- Redirection to Oauth screen and trigger initialization -->
+<a href='https://api-authify.azurewebsites.net/auth/google?url={YOUR_APP_URL}' target='_blank'>Continue with Google </a>
+```
+
+#### Response URL
+
+```javascript
+https://www.mrdhruv.co/?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2NjFlODljYmJlNjgzMzc1N2FiNTUxY2YifSwiaWF0IjoxNzEzMjc3NDUyfQ.n8_WjYngosSCByfeQgtyx51hVle6p1eRY6QcdZojOSs
+```
+
+
+### Delete Account
+
+#### I Sending Otp to given email address:
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/delete/email
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `email`    | `string` | **Required** Email address             |
+
+#### Usage
+
+javascript:
+
+```javascript
+const deleteGen = await fetch('https://api-authify.azurewebsites.net/autdelete/email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: user.email })
+    })
+
+    const response = await deleteGen.json();
+    console.log(response)
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+}
+
+```
+
+
+#### II OTP verification and account deletion:
+
+```js
+  POST https://api-authify.azurewebsites.net/auth/delete/email
+```
+
+#### Body :
+
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `email`    | `string` | **Required** Email address             |
+| `authcode`    | `number` | **Required** OTP (6 digit)           |
+| `password`    | `string` | **Required** Password (min-length : 8)            |
+
+#### Usage
+
+javascript:
+
+```javascript
+const response = await fetch('https://api-authify.azurewebsites.net/auth/delete/email/verify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: user.email, authcode: Number(credentials.   verifyToken), password: credentials.password })
+  })
+
+const response = await deleteGen.json();
+console.log(response)
+```
+
+#### response
+
+```javascript
+{
+  "success": true,
+}
+
+```
