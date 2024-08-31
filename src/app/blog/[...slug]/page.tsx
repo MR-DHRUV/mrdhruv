@@ -1,7 +1,8 @@
 import { blogs } from "#site/content"
-import { MDXContent } from "@/app/blog/Renderer/mdx-components";
+import { MDXContent } from "@/components/Renderer/mdx-components";
 import { notFound } from "next/navigation";
-import "../page.css";
+import "../../styles/tailwind.global.css"
+import "../../styles/mdx.css"
 
 interface PostPageProps {
     params: {
@@ -11,7 +12,6 @@ interface PostPageProps {
 
 async function getPost(params: PostPageProps['params']) {
     const slug = params?.slug.join('/');
-    console.log("slug", slug);
     const post = blogs.find((post) => post.slugAsParams === slug);
     return post;
 }
@@ -28,10 +28,14 @@ export default async function PostPage({ params }: PostPageProps) {
         notFound();
     }
 
-    return <article className="container py-6 prose max-w-3-xl mx-auto">
-        <h1 className="mb-2">{post.title}</h1>
-        {post.description ? <p className="text-xl mt-0 text-muted-foreground">{post.description}</p> : null}
-        <hr className="my-4" />
-        <MDXContent code={post.body} />
-    </article>
+    return <div className="flex justify-between p-4">
+        <article className="container py-6 prose max-w-3xl mx-auto">
+            <h1 className="mb-2">{post.title}</h1>
+            {post.description ? (
+                <p className="text-xl mt-0 text-muted-foreground">{post.description}</p>
+            ) : null}
+            <hr className="my-4" />
+            <MDXContent code={post.body} />
+        </article>
+    </div>
 }

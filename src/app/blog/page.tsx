@@ -1,5 +1,5 @@
 import React from 'react'
-import "./page.css"
+import "../styles/tailwind.global.css"
 import { blogs } from '#site/content'
 import PostItem from './post-item';
 

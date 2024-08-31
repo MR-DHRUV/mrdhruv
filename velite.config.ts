@@ -1,5 +1,7 @@
 import { defineConfig, defineCollection, s } from 'velite'
-
+import rehypeSlug from 'rehype-slug'
+import rehypePrettyCode from 'rehype-pretty-code'
+import rehypeAutoLinkHeadings from 'rehype-autolink-headings'
 
 // Now we want to automate certain things
 // like extraction of path from url
@@ -46,7 +48,7 @@ export default defineConfig({
     },
     collections: { blogs, projects },
     mdx: {
+        rehypePlugins: [rehypeSlug, [rehypePrettyCode, {theme: 'github-dark'}], [rehypeAutoLinkHeadings, {behavior: 'wrap', properties: {className: 'subheading-anchor'}, ariaLabel:"Link to section"}]],
         remarkPlugins: [],
-        rehypePlugins: [],
     }
 });

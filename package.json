@@ -38,11 +38,15 @@
     "react-ts-typewriter": "^0.1.8-b",
     "recharts": "^2.7.3",
     "sweetalert2": "^11.7.26",
+    "tailwind-merge": "^2.5.2",
     "tailwindcss": "^3.4.10",
     "typescript": "5.1.6"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-slug": "^6.0.0",
     "velite": "^0.1.1"
   }
 }
