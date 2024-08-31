@@ -19,8 +19,7 @@ const projects = defineCollection({
         slug: s.path(), // slug is the file path
         title: s.string(), // title of the project
         body: s.mdx(),
-    })
-        .transform(computedFields),
+    }).transform(computedFields),
 });
 
 const blogs = defineCollection({
@@ -33,8 +32,7 @@ const blogs = defineCollection({
         date: s.isodate(),
         published: s.boolean().default(true),
         body: s.mdx(),
-    })
-        .transform(computedFields),
+    }).transform(computedFields),
 });
 
 export default defineConfig({

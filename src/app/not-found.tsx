@@ -1,5 +1,4 @@
-import Image from "next/image"
-import styles from "./404.module.css"
+import styles from "./styles/404.module.css"
 import type { Metadata } from 'next'
 import Link from "next/link"
 

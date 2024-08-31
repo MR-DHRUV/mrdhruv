@@ -1,6 +1,6 @@
 import linkData from './d_link.json'
 import Link from 'next/link';
-import styles from "../404.module.css";
+import styles from "../styles/404.module.css";
 import { notFound, redirect } from 'next/navigation';
 
 interface RedirectPageProps {

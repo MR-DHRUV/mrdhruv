@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css"
-import Card, { cardProp } from "./card"
-import { Carousel } from "./carousel"
+import Card from "./card"
+// import { Carousel } from "./carousel"
 import DriveEtaIcon from '@mui/icons-material/DriveEta';
 import SportsTennisIcon from '@mui/icons-material/SportsTennis';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';

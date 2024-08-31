@@ -1,4 +1,3 @@
-"use client";
 import Card, {cardProp} from "./card"
 import styles from "./page.module.css"
 import Accordion from 'react-bootstrap/Accordion';

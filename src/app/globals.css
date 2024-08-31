@@ -264,3 +264,13 @@
         display: none !important;
     }
 }
+
+#typewriter span span {
+    animation: hideSpan 0s 2.2s forwards;
+}
+
+@keyframes hideSpan {
+    to {
+        visibility: hidden;
+    }
+}

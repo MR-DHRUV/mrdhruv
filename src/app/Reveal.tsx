@@ -14,7 +14,6 @@ export default function Reveal({ children, width = "100%" }: Props) {
 
     useEffect(() => {
         if (isInView) {
-            // Fire the annimation 
             controller.start("visible");
         }
     }, [isInView])

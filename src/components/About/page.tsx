@@ -22,13 +22,3 @@ export default function About() {
     )
 }
 
-/**
- <div className={styles.tag}>
-                    <img src="https://framerusercontent.com/images/NlgEZGfsuTMScgi5lWK78nheeo.png" className={styles.tagImg} height={16} />
-                    <p className={styles.tagText}>Next.js</p>
-                </div>
-                <div className={styles.tag}>
-                    <img src="https://framerusercontent.com/images/NlgEZGfsuTMScgi5lWK78nheeo.png" className={styles.tagImg} height={16} />
-                    <p className={styles.tagText}>Next.js</p>
-                </div> 
- */ 

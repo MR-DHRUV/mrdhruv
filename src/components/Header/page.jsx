@@ -6,12 +6,6 @@ import styles from "./page.module.css"
 import Typewriter from "react-ts-typewriter";
 
 export default function Header() {
-
-    // hide cursor 
-    setTimeout(() => {
-        document.querySelector('#typewriter span span').style.display = 'none';
-    }, 4100);
-
     return (
         <div className={styles.header}>
             <div className={styles.left}>
