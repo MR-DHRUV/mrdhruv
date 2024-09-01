@@ -14,9 +14,7 @@ export default function Header() {
                     <Image src={"/static/temp.jpg"} alt='Dhruv' height={64} width={64} className={styles.headerImage} unoptimized />
                 </div>
                 <div className={styles.textDiv}>
-                    <h3 className={styles.name}>
-                        <Link href="/">Dhruv Gupta</Link>
-                    </h3>
+                    <Link href="/" className={styles.name}>Dhruv Gupta</Link>
                     <p className={styles.sub} id='typewriter'>
                         <Typewriter text="An avid traveler with a nerdy streak! " />
                     </p>

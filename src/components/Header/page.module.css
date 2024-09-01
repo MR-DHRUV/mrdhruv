@@ -32,12 +32,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.2em;
-    color: #000000;
+    color: #000000 !important;
+    text-decoration: none !important;
 }
 
 .name:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    text-decoration: underline !important;
+    cursor: pointer !important;
 }
 
 .sub {
@@ -125,5 +126,7 @@
     .sub,
     .name {
         text-align: center;
+        display: inline-block;
+        width: 100%;
     }
 }

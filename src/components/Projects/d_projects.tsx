@@ -14,7 +14,25 @@ export interface cardProp {
     icon: ReactNode
 };
 
+export interface DictProp{
+    [key: string]: {
+        icon: ReactNode,
+        isLast: boolean
+    };
+}
+
 const size = 22;
+
+// const IconDict: DictProp = {
+//     "pathfinding": <NearMeIcon width={size} height={size} />,
+//     "authify": <GppGoodIcon width={size} height={size} />,
+//     "axonify": <TryIcon width={size} height={size} />,
+//     "gencert": <WorkspacePremiumIcon width={size} height={size} />,
+//     "validator": <Code width={size} height={size} />,
+//     "notify": <PageEdit width={size} height={size} />,
+//     "smoothy": <InterestsOutlinedIcon width={size} height={size} />
+// }
+
 
 const projectdata: cardProp[] = [
     {

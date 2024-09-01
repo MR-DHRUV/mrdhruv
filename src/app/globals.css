@@ -311,7 +311,7 @@ code {
 }
 
 #typewriter span span {
-    animation: hideSpan 0s 2.2s forwards;
+    animation: hideSpan 0s 3.5s forwards;
 }
 
 @keyframes hideSpan {

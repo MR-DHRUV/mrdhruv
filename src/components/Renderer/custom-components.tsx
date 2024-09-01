@@ -12,7 +12,7 @@ export function h1({
     return (
         <>
             <h1
-                className="pb-0 mb-2 heading-m mt-12"
+                className="pb-0 mb-1 heading-m mt-12"
                 {...props}
             >
                 {children}

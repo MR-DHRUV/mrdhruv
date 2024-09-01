@@ -14,7 +14,7 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
 // defining a collection for projects
 const projects = defineCollection({
     name: 'projects',
-    pattern: "projects/**/*.mdx",
+    pattern: "project/**/*.mdx",
     schema: s.object({
         slug: s.path(), // slug is the file path
         title: s.string(), // title of the project
@@ -27,31 +27,18 @@ const projects = defineCollection({
     }).transform(computedFields),
 });
 
-const blogs = defineCollection({
-    name: 'Post',
-    pattern: "blog/**/*.mdx",
-    schema: s.object({
-        slug: s.path(),
-        title: s.string(),
-        description: s.string().optional(),
-        date: s.isodate(),
-        published: s.boolean().default(true),
-        body: s.mdx(),
-    }).transform(computedFields),
-});
-
 export default defineConfig({
     root: "content",
     output: {
-        data: ".velite", 
+        data: ".velite",
         assets: "public/static", // static assets will be stored here
         base: "/static/",
         name: "[name]-[hash:6].[ext]",
         clean: true,
     },
-    collections: { blogs, projects },
+    collections: { projects },
     mdx: {
-        rehypePlugins: [rehypeSlug, [rehypePrettyCode, { theme: 'one-dark-pro'}], [rehypeAutoLinkHeadings, {behavior: 'wrap', properties: {className: 'subheading-anchor'}, ariaLabel:"Link to section"}]],
+        rehypePlugins: [rehypeSlug, [rehypePrettyCode, { theme: 'one-dark-pro' }], [rehypeAutoLinkHeadings, { behavior: 'wrap', properties: { className: 'subheading-anchor' }, ariaLabel: "Link to section" }]],
         remarkPlugins: [],
     }
 });

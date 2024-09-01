@@ -7,7 +7,6 @@ import Education from '@/components/Education/page'
 import Socials from '@/components/Socials/page'
 import DSA from '@/components/DSA/page'
 import Contact from '@/components/Contact/page'
-import Skills from '@/components/Skills/page'
 import Reveal from "./Reveal"
 import styles from './layout.module.css'
 
@@ -29,9 +28,6 @@ export default function Home() {
             <Reveal>
                 <Experience />
             </Reveal>
-            {/* <Reveal>
-                    <Skills />
-                </Reveal>  */}
             <Reveal>
                 <DSA />
             </Reveal>
