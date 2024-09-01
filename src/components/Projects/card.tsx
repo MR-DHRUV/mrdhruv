@@ -5,9 +5,9 @@ import { cardProp } from "./d_projects"
 import Link from "next/link";
 
 
-const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
+const Card: React.FC<cardProp> = ({ isLast, url, name, icon, description }) => {
     return (
-        <div className={!isLast ? styles.item : styles.itemEnd}>
+        <div className={!isLast ? styles.item : styles.item}>
             <div className={styles.top}>
                 <div className={styles.left}>
                     <div className={styles.imageContainer}>
@@ -15,7 +15,7 @@ const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
                     </div>
                     <p className={styles.pname}>{name}</p>
                 </div>
-                <Link href={url} target="_blank" className={styles.link}>
+                <Link href={url} className={styles.link}>
                     <p className={styles.linkText}>
                         Take a look
                     </p>
@@ -23,7 +23,7 @@ const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
                 </Link>
             </div>
             <p className="desc-m">
-                Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and curve completion.
+               {description}
             </p>
         </div>
     )
