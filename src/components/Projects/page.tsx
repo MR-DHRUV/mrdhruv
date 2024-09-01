@@ -1,11 +1,10 @@
 import Card from "./card"
 import { projects } from "#site/content"
 import dict from "./d_projects"
-import { p } from "../Renderer/custom-components"
 
 export default function Projects() {
     return (
-        <div className="main-container bg-trans">
+        <div className="main-container bg-white">
             <h2 className="section-heading">
                 Projects
             </h2>

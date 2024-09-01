@@ -7,13 +7,13 @@ import Link from "next/link";
 
 const Card: React.FC<cardProp> = ({ isLast, url, name, icon, description }) => {
     return (
-        <div className={!isLast ? styles.item : styles.item}>
+        <div className={!isLast ? styles.item : styles.itemEnd}>
             <div className={styles.top}>
                 <div className={styles.left}>
                     <div className={styles.imageContainer}>
                         {icon}
                     </div>
-                    <p className={styles.pname}>{name}</p>
+                    <p className="heading-s" style={{width:"max-content"}}>{name}</p>
                 </div>
                 <Link href={url} className={styles.link}>
                     <p className={styles.linkText}>
@@ -23,7 +23,7 @@ const Card: React.FC<cardProp> = ({ isLast, url, name, icon, description }) => {
                 </Link>
             </div>
             <p className="desc-m">
-               {description}
+                {description}
             </p>
         </div>
     )
