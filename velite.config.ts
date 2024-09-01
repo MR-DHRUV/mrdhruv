@@ -31,7 +31,7 @@ export default defineConfig({
     root: "content",
     output: {
         data: ".velite",
-        assets: "public/static", // static assets will be stored here
+        assets: "public/static/vellite", // static assets will be stored here
         base: "/static/",
         name: "[name]-[hash:6].[ext]",
         clean: true,
