@@ -8,7 +8,14 @@ export default function Projects() {
             <h2 className="section-heading">
                 Projects
             </h2>
-            {projects.sort((a, b) => a.title.localeCompare(b.title)).map((project, idx) => (
+            {projects.sort((a, b) => {
+                if (a.title === "A* Pathfinding" && b.title === "Authify") {
+                    return 1;
+                }else if (a.title === "Authify" && b.title === "A* Pathfinding") {
+                    return -1;
+                }
+                return a.title.localeCompare(b.title);
+            }).map((project, idx) => (
                 <Card
                     description={project.description}
                     icon={dict[project.slugAsParams]}
@@ -16,6 +23,9 @@ export default function Projects() {
                     name={project.title}
                     url={project.slug}
                     key={idx}
+                    iconColor={project.color}
+                    tags={project.tags}
+                    isFirst={idx === 0}
                 />
             ))}
         </div>

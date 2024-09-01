@@ -249,9 +249,9 @@ code {
     font-weight: 500 !important;
     font-style: normal !important;
     word-wrap: break-word !important;
-    font-size: 22px !important;
+    font-size: 22px;
     letter-spacing: 0em !important;
-    line-height: 28px !important;
+    line-height: 28px;
 }
 
 .heading-m {
@@ -319,6 +319,12 @@ code {
 
     .d-m-none {
         display: none !important;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .mw-mob-fix{
+        max-width: 200px !important;
     }
 }
 

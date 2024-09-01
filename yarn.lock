@@ -3871,14 +3871,6 @@ react-transition-group@2.9.0:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react-ts-typewriter@^0.1.8-b:
-  version "0.1.8-b"
-  resolved "https://registry.npmjs.org/react-ts-typewriter/-/react-ts-typewriter-0.1.8-b.tgz"
-  integrity sha512-vCXRMvF6J9ihrl+NZfpgTmgxj3nG2f6l+YqS2Up8SkwWbraPLRU0H32cPg7F76Y8tn311Cgaro2nLFja5/tGWA==
-  dependencies:
-    react "^18.2.0"
-    react-dom "^18.2.0"
-
 react@*, "react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^16.8.6 || ^17 || ^18", "react@^17.0.0 || ^18.0.0", "react@^18 || ^19", react@^18.0.0, react@^18.2.0, "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", react@>=0.14.0, react@>=15.0.0, react@>=16, react@>=16.14.0, react@>=16.6.0, react@>=16.8.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"

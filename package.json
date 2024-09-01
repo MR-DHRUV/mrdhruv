@@ -35,7 +35,6 @@
     "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "react-ts-typewriter": "^0.1.8-b",
     "recharts": "^2.7.3",
     "shiki": "^1.15.1",
     "sweetalert2": "^11.7.26",

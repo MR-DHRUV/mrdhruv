@@ -8,6 +8,9 @@ export interface cardProp {
     name: string;
     icon: ReactNode;
     description: string;
+    iconColor: string;
+    tags: string[];
+    isFirst: boolean;
 };
 
 export interface DictProp{

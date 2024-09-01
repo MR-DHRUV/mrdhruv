@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { PageStar } from 'iconoir-react'
 import Link from 'next/link'
 import styles from "./page.module.css"
-import Typewriter from "react-ts-typewriter";
 
 export default function Header() {
     return (

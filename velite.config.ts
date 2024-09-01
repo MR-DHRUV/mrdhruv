@@ -24,6 +24,7 @@ const projects = defineCollection({
         github: s.string(),
         deployment: s.string().optional(),
         image: s.string(),
+        color: s.string(),
     }).transform(computedFields),
 });
 
