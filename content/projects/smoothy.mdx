@@ -53,9 +53,7 @@ In this ambiguous situation, we experimentally discovered the following approach
 3. On further experimentation, we discovered that we can first try the subsets containing more polylines, i.e N, N-1, N-2, ... as they have a higher probability of being a shape. Thus, we first generate `threshold` number of subsets having polylines in decreasing order of N as they have a higher probability of being a shape.
 
 4. We then make predictions on these subsets and whenever a shape is predicted with a `probability ϕ > 'tline'` for subset containing only `lines` and `ϕ > 'tcurve'` for subset containing only `curves`, then we add it to the final output. It is important to note that `tline` and `tcurve` are hyperparameters and can be tuned to get better results and the used values are also determined using hit and trial.
-
     1. We now remove the polylines which are part of the predicted shape from the remaining set of polylines and recompute the subsets.
-
     2. We repeat the process until we have no polylines left or no prediction was made in the current iteration. If no prediction was made in the current iteration, we simply add the remaining polylines to the final output as lines or curves.
 
 **All the values of thresholds are determined experimetally.**

@@ -15,7 +15,7 @@ export default function Header() {
                 </div>
                 <div className={styles.textDiv}>
                     <h3 className={styles.name}>
-                        Dhruv Gupta
+                        <Link href="/">Dhruv Gupta</Link>
                     </h3>
                     <p className={styles.sub} id='typewriter'>
                         <Typewriter text="An avid traveler with a nerdy streak! " />
