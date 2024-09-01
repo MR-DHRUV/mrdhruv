@@ -23,7 +23,7 @@ const Card: React.FC<cardProp> = ({ isLast, url, name, icon }) => {
                 </Link>
             </div>
             <p className="desc-m">
-                Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and curve completion. It is applied in real-world scenarios to recognize and transform hand-drawn shapes into precise geometric forms, even completing missing segments.
+                Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and curve completion.
             </p>
         </div>
     )

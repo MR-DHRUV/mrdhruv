@@ -265,6 +265,17 @@ code {
     line-height: 32px !important;
 }
 
+.heading-ml {
+    font-family: "IBM Plex Mono", monospace;
+    position: relative !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+    word-wrap: break-word !important;
+    font-size: 28px !important;
+    letter-spacing: 0em !important;
+    line-height: 34px !important;
+}
+
 .heading-l {
     font-family: "IBM Plex Mono", monospace;
     position: relative !important;

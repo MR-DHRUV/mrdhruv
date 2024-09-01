@@ -1,48 +1,48 @@
 ---
 title: "Authify"
-description: Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and curve completion. It is applied in real-world scenarios to recognize and transform hand-drawn shapes into precise geometric forms, even completing missing segments.
-tags: ["Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth"]
-github: "https://github.com/MR-DHRUV/smoothy"
-deployment: "https://github.com/MR-DHRUV/smoothy"
+description: "Authify is a RESTful API supporting email and Google-based authentications, providing secure and seamless user authentication processes."
+tags: ["Node.js", "Express.js", "MongoDB", "JWT", "Google OAuth", "NodeMailer", "Hashing"]
+github: "https://github.com/MR-DHRUV/Authify-The-Authentication-API"
 image: "/static/project_1.png"
 ---
 
+# Contents
+- [Overview](#overview)
+- [Signup](#signup)
+- [Signin](#signin)
+- [Verification](#verification)
+- [Reseting password](#reseting-password)
+- [Authentication with Google](#authentication-with-google)
+- [Delete Account](#delete-account)
 
-# Authify : The Authentication API
-Secure, complete and hassle free **authentication solution** for your applications
 
-## Features
 
-- Signup using Email and generation of unique JWT token.
-- Signin
-- Fetching User details from JWT token.
-- Reseting Password via OTP on corresponding Email address.
-- Authentication using Google.
-- Deletion of account
-- **Instant Updates on email for all account activity like login ,  change of password, and etc**
+# Overview
+- Authify is a RESTful API that supports secure user authentication via email and Google-based methods. Users can sign up with an email, generating a unique JWT token, and sign in using either email or Google authentication. The API also enables fetching user details from the JWT token.
+- The API offers features such as password reset through OTP sent to the registered email and supports account deletion. Additionally, it includes two-factor authentication to enhance security.
+- Authify provides real-time email notifications for all account activities, such as login events, password modifications, and other relevant actions, ensuring users are promptly informed of any changes to their accounts.
+
 
 # Endpoints
 
-### Signup
+## Signup
 
-#### I Sending OTP to given email address:
+### I Sending OTP to given email address:
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/signup/email
 ```
 
 #### Body :
-
 | Parameter  | Type     | Description                             |
 | :--------- | :------- | :-------------------------------------- |
 | `email`    | `string` | **Required** Email Address                 |
 
 #### Usage
-
 javascript:
 
 ```javascript
-const createNewUserViaEmail = await fetch('https://api-authify.herokuapp.auth/signup/email', {
+const createNewUserViaEmail = await fetch('https://api-authify.azurewebsites.net/signup/email', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -53,16 +53,13 @@ const json = await createNewUserViaEmail.json();
 console.log(json);
 ```
 
-#### response
+#### Response
 
 ```javascript
-{
-  "success": true,
-}
-
+{  "success": true,}
 ```
 
-#### II Verivication and creation of a new user:
+### II Verivication and creation of a new user:
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/signup/email/verify
@@ -101,17 +98,16 @@ const response = await createNewUser.json();
 console.log(json);
 ```
 
-#### response
+#### Response
 
 ```javascript
 {
   "success": true,
   "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MjljN2YzYWVmMzEwNjg4N2EyYWNkZDAifSwiaWF0IjoxNjU0NDIzMzU1fQ.R1rX4sRHv-o3gDWT3XqtobYEKeYRmyvA8ZLpveobuGc"
 }
-
 ```
 
-### Signin
+## Signin
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/signin
@@ -146,17 +142,16 @@ const response = await signInUser.json();
 console.log(json);
 ```
 
-#### response
+#### Response
 
 ```javascript
 {
   "success": true,
   "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXIiOiI2MjljN2YzYWVmMzEwNjg4N2EyYWNkZDAifSwiaWF0IjoxNjU0NDIzMzU1fQ.R1rX4sRHv-o3gDWT3XqtobYEKeYRmyvA8ZLpveobuGc"
 }
-
 ```
 
-### Fetch User details from token \ Verification
+## Verification
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/verifyuser
@@ -165,7 +160,7 @@ console.log(json);
 #### Header :
 
 | Parameter      | Type     | Description                                                                                                                                                                       |
-| :------------- | :------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| :------------- | :------- | --------- |
 | `Content-Type` | `string` | **Required** application/json                                                                                                                                                    |
 | `auth-token`   | `string` | **Required** eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1..... |
 
@@ -189,7 +184,7 @@ const response = await getUser.json();
 console.log(json);
 ```
 
-#### response
+#### Response
 
 ```javascript
 {
@@ -200,13 +195,12 @@ console.log(json);
   "date": "2022-06-05T10:02:34.938Z",
   "__v": 0
 }
-
 ```
 
-### Reseting password
+## Reseting password
 Can be used for both resetting the password and updation of password
 
-#### I : Sending OTP to corresponding Email address
+### I : Sending OTP to corresponding Email address
 
 ```js
   POST https://api-authify.azurewebsites.net/fogotpassword
@@ -238,14 +232,13 @@ const response = await sendMail.json();
 console.log(response);
 ```
 
-#### response
+#### Response
 
 ```javascript
 {
   "success": true,
   "message": "Email Send"
 }
-
 ```
 
 ### II : OTP verification and updating new password
@@ -285,17 +278,16 @@ const changePassword = await fetch(
 const response = await changePassword.json();
 ```
 
-#### response
+#### Response
 
 ```javascript
 {
     "success" : true ,
     "msg" : "Password Updated"
 }
-
 ```
 
-### Authentication with Google
+## Authentication with Google
 
 To authenticate with google, you need to pass your app url as a query parameter in the url. Once the user authenticates with google, the user will be redirected to the app url with the auth token as a query parameter. You can fetch the token from the url and use it for further authentication.
 
@@ -318,9 +310,9 @@ https://www.mrdhruv.co/?authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyI
 ```
 
 
-### Delete Account
+## Delete Account
 
-#### I Sending Otp to given email address:
+### I Sending Otp to given email address:
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/delete/email
@@ -349,17 +341,14 @@ const deleteGen = await fetch('https://api-authify.azurewebsites.net/autdelete/e
     console.log(response)
 ```
 
-#### response
+#### Response
 
 ```javascript
-{
-  "success": true,
-}
-
+{  "success": true,}
 ```
 
 
-#### II OTP verification and account deletion:
+### II OTP verification and account deletion:
 
 ```js
   POST https://api-authify.azurewebsites.net/auth/delete/email
@@ -390,11 +379,8 @@ const response = await deleteGen.json();
 console.log(response)
 ```
 
-#### response
+#### Response
 
 ```javascript
-{
-  "success": true,
-}
-
+{  "success": true,}
 ```

@@ -1,0 +1,81 @@
+---
+title: "Axonify"
+description: " A simple API that implements public and private key architecture to send and receive messages anonymously." 
+tags: ["Node.js", "Express.js", "MongoDB", "NodeMailer"]
+github: "https://github.com/MR-DHRUV/Axonify-The-Secrect-Messenging-API"
+image: "/static/project_1.png"
+---
+
+# Contents
+- [Overview](#overview)
+- [Getting API key](#getting-api-key)
+- [Sending Message](#sending-message)
+- [Viewing Messages](#viewing-messages)
+
+
+# Overview
+Axonify is a simple API that implements public and private key architecture to send and receive messages anonymously. The API generates a public and private key pair for each user. The public key is used to send messages to the user, and the private key is used to view the messages. The API also provides endpoints to send and view messages. You can broadcast your public key to recieve messages.
+
+# Endpoints
+## Getting API key
+<div className="mb-3" />
+```js
+POST https://axonify.azurewebsites.net/user/new
+```
+### Body(json):
+| Parameter  | Type     | Description                           |
+| :--------- | :------- | :-------------------------------------- |
+| `email`    | `string` | **Required**               |
+
+### Response:
+```javascript 
+{"message": "Account created successflly, Please check your email for api key" }
+```
+
+
+
+
+## Sending Message
+<div className="mb-3" />
+```js
+  POST https://axonify.azurewebsites.net/msg/new
+```
+
+### Body (json):
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `sKey`     | `string` | **Required** , Sender's private key | 
+| `rKey`     | `string` | **Required** , Receiver's public key|
+| `message`    | `string` | **Required** , Message                |
+
+### Response
+```javascript
+{message: "Message sent successfully"}
+```
+
+## Viewing Messages
+<div className="mb-3" />
+```js
+  GET https://axonify.azurewebsites.net/msg/view
+```
+
+### Body (json):
+| Parameter  | Type     | Description                             |
+| :--------- | :------- | :-------------------------------------- |
+| `priKey`     | `string` | **Required** , Your private key | 
+
+
+### Response
+```javascript
+{
+  "message": "1 New Messages",
+  "data": [
+    {
+      "msg": "hello world"
+    }
+  ]
+}
+```
+
+
+

@@ -84,22 +84,23 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 {project.description}
             </p>
 
-            <Image src={project.image} alt="Project Image" className="!w-full" width={40} height={40} />
+            <Image src={project.image} alt="Project Image" className="!w-full" width={40} height={40} unoptimized />
 
             <div className="flex flex-row flex-wrap items-center gap-3">
-                {project?.deployment ? <Link href={project.deployment} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center">
+                {project?.deployment ? <Link href={project.deployment} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center" target="_blank">
                     <LinkIcon className="me-1" />
                     Deployment
                 </Link> : null}
-                <Link href={project.github} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center">
+                <Link href={project.github} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center" target="_blank">
                     <LinkIcon className="me-1" />
                     Github
                 </Link>
             </div>
 
         </div>
-        <article className="py-6 prose w-full max-w-[700px]">
+        <article className="prose w-full max-w-[700px] !mt-[-25px]">
             <MDXContent code={project.body} />
+            <hr className=" mb-0 border-zinc-400 border-b-1" />
         </article>
     </>
 

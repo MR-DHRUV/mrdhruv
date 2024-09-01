@@ -12,12 +12,12 @@ export function h1({
     return (
         <>
             <h1
-                className="pb-0 mb-1 heading-m mt-12"
+                className="pb-0 mb-1 heading-ml mt-12"
                 {...props}
             >
                 {children}
             </h1>
-            <hr className="mt-0 !pt-0 mb-5 border-zinc-400" />
+            <hr className="mt-0 !pt-0 mb-5 border-zinc-400 border-b-[1.5px]" />
         </>
     );
 }
@@ -28,7 +28,7 @@ export function h2({
 }: Props) {
     return (
         <h2
-            className="heading-s mb-1 pb-0"
+            className="heading-font mb-1 pb-0 underline decoration-zinc-300"
             {...props}
         >
             {children}
@@ -98,7 +98,7 @@ export function p({
 }: Props) {
     return (
         <p
-            className="desc-ml !text-[18px]"
+            className="desc-ml !text-[18px] mb-0"
             {...props}
         >
             {children}
@@ -132,5 +132,19 @@ export function li({
         >
             {children}
         </li>
+    );
+};
+
+export function figure({
+    children,
+    ...props
+}: Props) {
+    return (
+        <figure
+            className="mb-0 mt-1"
+            {...props}
+        >
+            {children}
+        </figure>
     );
 };

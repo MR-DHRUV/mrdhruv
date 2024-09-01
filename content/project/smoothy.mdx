@@ -8,28 +8,54 @@ image: "/static/project_1.png"
 ---
 
 # Contents
-- [File Structure and Resources](#file-structure-and-resources)
+- [Overview](#overview)
+- [Resources](#resources)
 - [Approach](#Approach)
 - [Shape Classification](#shape-classification)
 - [Regularization](#regularization)
-- [Results of regularization (Task-I)](#results-of-regularization)
+- [Results of regularization](#results-of-regularization)
 - [Symmetry Detection](#symmetry-detection)
-- [Results of symmetry detection (Task-II)](#results-of-symmetry-detection)
+- [Results of symmetry detection](#results-of-symmetry-detection)
 - [Curve Completion](#curve-completion)
-- [Results of shape completion (Task-III)](#results-of-curve-completion)
-- [Support](#support)
 
-# File Structure and Resources
-The code for task-I and task-II is implemented in the `task-1.ipynb` and  the code for task-III is in the `task-3.ipynb` notebooks respectively. The saved model for shape classification is in the `shape_classifier.keras` file.
+# Overview
+- Smoothy is a comprehensive pipeline designed for shape classification, regularization, symmetry detection, and
+curve completion. It is applied in real-world scenarios to recognize and transform hand-drawn shapes into precise
+geometric forms, even completing missing segments.
+
+- The pipeline employs a Convolutional Neural Network (CNN) to classify multiple polylines into specific shapes while
+accurately identifying the polylines corresponding to each shape. The model is trained on an augmented version of
+the QuickDraw dataset, covering 12 shape classes. The model is highly efficient, with a compact architecture
+comprising of just 0.6 million parameters, while still achieving a robust accuracy of 93.01% on the test set.
+
+- It uses shape replacement algorithms to replace the classified shapes with the regularized shapes making them
+geometrically correct. For curve completion, it detects potential occlusions, generates convex hulls for grouped
+polylines, and completes the curves using interpolation techniques.
+
+- **It is applied in real-world scenarios to recognize and transform hand-drawn shapes into precise geometric forms, even completing missing segments.**
+
+# Resources
+The code for shape classification, regularization, and symmetry detection is implemented in the `task-1.ipynb` and  the code for curve completion is in the `task-3.ipynb` notebooks respectively. The saved model for shape classification is in the `shape_classifier.keras` file.
 
 For ease of access, you can use the following links to directly access the notebooks:
 - [Task-I](https://colab.research.google.com/drive/1bpjnAHxYhJEY47jMYy5cCMuDFpaywcRp?usp=sharing)
 - [Task-III](https://colab.research.google.com/drive/1iMVd0BDJbonrwM5QQb6TvnntSR9m84pP?usp=sharing)
+- Please find the model on Gitub link above.
+
+## Input/Output Format
+The input to the code is a CSV file containing the polylines. Each row in the CSV file represents a polyline, with the first column containing the `polyline ID`, second column is intentionally left blank, and the third column contains `x` coordinates and the fourth column contains `y` coordinates.
+
+| Col_1       | Col_2 | Col_3 | Col_4 |
+|-------------|---|---|---|
+| 1           |   | 1 | 2 |
+| 1           |   | 2 | 3 |
+| 1           |   | 3 | 4 |
+
 
 The code directly read the `input.csv` file and writes the output to the `output.csv` file. The `input.csv` file should be in same directory as the code.
 
 # Approach
-After fully understanding and analyzing the problem statement, we noticed that once we categorize the polylines into shapes, it becomes relatively simple to regularize the shapes and identify any symmetry within them.
+Once we categorize the polylines into shapes, it becomes relatively simple to regularize the shapes and identify any symmetry within them.
 
 In a nutshell, the approach can be defined follows:
 1. Classify the polylines into shapes using a `CNN model`
@@ -80,21 +106,15 @@ Due to limmitation of time, we cannot implement regularization for all other sha
 
 # Results of regularization
 
-#### isolated.csv
+<Callout text="Example 1" />
+![image](/static/isolated.svg)
+![image](/static/isolated_output.png)
+![image](/static/isolated_final.png)
 
-Shapes Found
-![image](/Images/isolated.png)
-
-Final Regularized Shapes
-![image](/Images/isolated_final.png)
-
-#### frag0.csv
-
-Shapes Found
-![image](/Images/frag0.png)
-
-Final Regularized Shapes
-![image](/Images/frag0_final.png)
+<Callout text="Example 2" />
+![image](/static/frag0.svg)
+![image](/static/frag0_output.png)
+![image](/static/frag0_final.png)
 
 # Symmetry Detection
 We leverage the predictions made by the `prediction pipeline` to detect symmetry in the shapes. For all the geometric shapes, we can always say it will be symmetric with atleast one line of reference. 
@@ -110,11 +130,10 @@ Now, the remaining task is to detect symmetry in the curves. To detect the symme
 
 # Results of symmetry detection
 
-#### isolated.csv
-![image](/Images/isolated_symmetry.png)
-
-#### frag0.csv
-![image](/Images/frag0_symmetry.png)
+<Callout text="Example 1" />
+![image](/static/isolated_symmetry.png)
+<Callout text="Example 2" />
+![image](/static/frag0_symmetry.png)
 
 
 # Curve Completion
@@ -132,18 +151,4 @@ After exprimenting a number of ways we have found that the following approach wo
 
 4. The connectivity of the completed data is checked again and the status before and after completing shapes is compared.
 
-# Results of curve completion
-
-#### occlusion1.csv
-![image](/Images/occ1.png)
-
-#### occlusion2.csv
-![image](/Images/occ2.png)
-
-
-# Support
-For any queries or support, please feel free to reach out to us at:
-- [Dhruv Gupta](mailto:dhruvgupta742@gmail.com)
-- [Nishant Ola](mailto:nishant.ola22@gmail.com)
-
-# Made with ❤️ by Team Nazariya ✨
+### Made with ❤️ by Team Nazariya ✨
