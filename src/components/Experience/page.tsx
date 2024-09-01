@@ -1,5 +1,5 @@
-import Card, {cardProp} from "./card"
-import styles from "./page.module.css"
+"use client";
+import Card, { cardProp } from "./card"
 import Accordion from 'react-bootstrap/Accordion';
 import expData from "./d_exp.json"
 

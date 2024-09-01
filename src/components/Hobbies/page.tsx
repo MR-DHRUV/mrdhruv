@@ -1,11 +1,7 @@
-"use client";
 import styles from "./page.module.css"
 import Card from "./card"
 // import { Carousel } from "./carousel"
-import DriveEtaIcon from '@mui/icons-material/DriveEta';
-import SportsTennisIcon from '@mui/icons-material/SportsTennis';
-import MusicNoteIcon from '@mui/icons-material/MusicNote';
-import SailingIcon from '@mui/icons-material/Sailing';
+import {DriveEta, SportsTennis, MusicNote, Sailing } from "@mui/icons-material"
 
 export default function Hobbies() {
     return (
@@ -14,10 +10,10 @@ export default function Hobbies() {
                 <h2 className="section-heading">
                     Hobbies
                 </h2>
-                <Card Icon={<DriveEtaIcon width={22} height={22} />} h="Driving" isLast={false} />
-                <Card Icon={<MusicNoteIcon width={22} height={22} />} h="Music" isLast={false} />
-                <Card Icon={<SailingIcon width={22} height={22} />} h="Travelling" isLast={false} />
-                <Card Icon={<SportsTennisIcon width={22} height={22} />} h="Table Tennis" isLast={true} />
+                <Card Icon={<DriveEta width={22} height={22} />} h="Driving" isLast={false} />
+                <Card Icon={<MusicNote width={22} height={22} />} h="Music" isLast={false} />
+                <Card Icon={<Sailing width={22} height={22} />} h="Travelling" isLast={false} />
+                <Card Icon={<SportsTennis width={22} height={22} />} h="Table Tennis" isLast={true} />
             </div>
             <div className="main-container main-container-sm bg-white">
                 {/* <Carousel /> */}

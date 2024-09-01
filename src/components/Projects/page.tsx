@@ -1,7 +1,6 @@
 import Card from "./card"
 import projectData from "./d_projects"
 
-
 export default function Projects() {
     return (
         <div className="main-container bg-white">

@@ -1,4 +1,3 @@
-"use client";
 import React from 'react'
 import Image from 'next/image'
 import { PageStar } from 'iconoir-react'
@@ -15,9 +14,9 @@ export default function Header() {
                 </div>
                 <div className={styles.textDiv}>
                     <Link href="/" className={styles.name}>Dhruv Gupta</Link>
-                    <p className={styles.sub} id='typewriter'>
-                        <Typewriter text="An avid traveler with a nerdy streak! " />
-                    </p>
+                    <div className="css-typing">
+                        <p className={styles.sub}>An avid traveler with a nerdy streak! </p>
+                    </div>
                 </div>
             </div>
             <div className={styles.right}>
