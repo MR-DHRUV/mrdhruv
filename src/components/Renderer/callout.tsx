@@ -17,9 +17,9 @@ export default function Callout({
             className={cn(
                 "my-1 mb-0 rounded-md border boder-l-4 p-1 w-full flex flex-row items-center",
                 {
-                    " bg-red-50 dark:prose": type === "danger",
-                    " bg-yellow-50 dark:prose": type === "warning",
-                    " bg-blue-50 dark:prose": type === "default",
+                    " bg-red-50 ": type === "danger",
+                    " bg-yellow-50": type === "warning",
+                    " bg-blue-50 ": type === "default",
                 }
             )}
             {...props}

@@ -87,11 +87,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <Image src={project.image} alt="Project Image" className="!w-full" width={630} height={235} unoptimized />
 
             <div className="flex flex-row flex-wrap items-center gap-3">
-                {project?.deployment ? <Link href={project.deployment} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center" target="_blank">
+                {project?.deployment ? <Link href={project.deployment} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg inline-flex items-center justify-center" target="_blank">
                     <LinkIcon className="me-1" />
                     Deployment
                 </Link> : null}
-                <Link href={project.github} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg dark:bg-gray-700 inline-flex items-center justify-center" target="_blank">
+                <Link href={project.github} className="bg-blue-100 hover:bg-blue-200 text-blue-800 text-md font-medium px-3 py-0.5 rounded-lg inline-flex items-center justify-center" target="_blank">
                     <LinkIcon className="me-1" />
                     Github
                 </Link>
