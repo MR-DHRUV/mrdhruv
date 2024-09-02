@@ -47,7 +47,7 @@
 
 
 .pname {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-family: var(--font-ibm-plex-sans-condensed), sans-serif !important;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;

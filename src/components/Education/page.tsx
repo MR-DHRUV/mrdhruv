@@ -15,13 +15,13 @@ export default function Education() {
                             <p className="desc-m text-center-mq">B.Tech Computer Science</p>
                         </div>
                         <div className={styles.text}>
-                            <p className={styles.company}>USICT, GGSIPU</p>
+                            <p className="inter">USICT, GGSIPU</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.info}>
                     <p className="desc-m text-start text-center-mq">2021 - Present</p>
-                    <p className="text-end text-center-mq">9.155 GPA</p>
+                    <p className="text-end text-center-mq inter">9.155 GPA</p>
                 </div>
             </div>
             <div className={styles.itemEnd}>
@@ -32,13 +32,13 @@ export default function Education() {
                             <p className="desc-m text-center-mq">XII - Science/Non-Medical</p>
                         </div>
                         <div className={styles.text}>
-                            <p className={styles.company}>Mount Abu Public School</p>
+                            <p className="inter">Mount Abu Public School</p>
                         </div>
                     </div>
                 </div>
                 <div className={styles.info}>
                     <p className="desc-m text-start text-center-mq">2020 - 2021</p>
-                    <p className="text-end text-center-mq">92.4 %</p>
+                    <p className="text-end text-center-mq inter">92.4 %</p>
                 </div>
             </div>
         </div>

@@ -7,12 +7,13 @@ import Socials from '@/components/Socials/page'
 import DSA from '@/components/DSA/page'
 import Contact from '@/components/Contact/page'
 import styles from './layout.module.css'
+import Image from 'next/image'
 
 export default function Home() {
     return (
         <>
             <div className={styles.gradientTop}>
-                <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
+                <Image src="/static/gradient.png" alt="gradient" className={styles.gradient} width={759} height={233}/>
             </div>
             <About />
             <Education />
@@ -23,7 +24,7 @@ export default function Home() {
             <Hobbies />
             <Contact />
             <div className={styles.gradientbottom}>
-                <img src="/static/gradient.png" alt="gradient" className={styles.gradient} />
+                <Image src="/static/gradient.png" alt="gradient" className={styles.gradient} width={759} height={233} />
             </div>
         </>
     )

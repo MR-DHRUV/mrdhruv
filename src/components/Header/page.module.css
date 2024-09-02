@@ -27,7 +27,7 @@
 }
 
 .name {
-    font-family: "IBM Plex Mono", monospace;
+    font-family: var(--font-ibm-plex-mono), monospace !important;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -42,7 +42,7 @@
 }
 
 .sub {
-    font-family: "IBM Plex Sans Condensed", sans-serif;
+    font-family: var(--font-ibm-plex-sans-condensed), sans-serif !important;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
@@ -81,7 +81,7 @@
     align-content: center;
     display: flex;
     gap: 6px;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: var(--font-ibm-plex-mono), monospace !important;
     font-size: 20px;
     font-weight: 300;
     line-height: 20px;

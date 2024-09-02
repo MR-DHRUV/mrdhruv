@@ -21,7 +21,7 @@ const Card: React.FC<cardProp> = ({ title, org, description, idx, image }) => {
                         <Image src={image} alt="" height={32} width={32} className={styles.img} />
                         <div className={styles.text}>
                             <p className="desc-m">{title} @ </p>
-                            <p>{org}</p>
+                            <p className='inter'>{org}</p>
                         </div>
                     </div>
                     <div className={styles.right}>

@@ -1,11 +1,24 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, IBM_Plex_Mono, IBM_Plex_Sans_Condensed } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/react"
 import Header from '@/components/Header/page'
 import styles from './layout.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+    subsets: ['latin'],
+    variable:"--font-inter"
+})
+const ibmPlexMono = IBM_Plex_Mono({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+    variable:"--font-ibm-plex-mono"
+})
+const ibmPlexSansCondensed = IBM_Plex_Sans_Condensed({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    variable:"--font-ibm-plex-sans-condensed"
+})
 
 export const metadata: Metadata = {
     title: {
@@ -34,7 +47,7 @@ export default function RootLayout({
         <html lang="en">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta name="language" content="en" />
-            <body className={inter.className}>
+            <body className={`${inter.className} ${ibmPlexMono.variable} ${ibmPlexSansCondensed.variable} ${inter.variable}`}>
                 <div className={styles.mainContainer}>
                     <Header />
                     {children}
