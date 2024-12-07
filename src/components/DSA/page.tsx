@@ -42,7 +42,7 @@ export default function DSA() {
 
     const [chartData, setChartData] = useState([
         { name: 'Easy', value: 569, },
-        { name: 'Medum', value: 883, },
+        { name: 'Medium', value: 883, },
         { name: 'Hard', value: 250, },
     ])
 
@@ -68,7 +68,7 @@ export default function DSA() {
 
         setChartData([
             { name: 'Easy', value: json.data.catCount.easy, },
-            { name: 'Medum', value: json.data.catCount.medium, },
+            { name: 'Medium', value: json.data.catCount.medium, },
             { name: 'Hard', value: json.data.catCount.hard, },
         ])
     }
