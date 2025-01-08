@@ -8,11 +8,11 @@ export default function About() {
                 <span className="text-muted">
                     {'{{'}
                 </span>
-                Software-Developer
+                SDE-Intern
                 <span className="text-muted">
                     {'}}'}
                 </span>
-                <span className="d-m-none"> 🚀</span>
+                @ 🚀GoDaddy
             </h1>
             <Tags />
             <p className="desc-l">
