@@ -1,5 +1,12 @@
 [
     {
+        "year": "Jan'25-Present",
+        "org": "GoDaddy",
+        "description": "Just Joined...",
+        "title": "SDE Intern",
+        "image":"/static/godaddy.png"
+    },
+    {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
         "description": "Single-handedly built a comprehensive website from scratch, encompassing both frontend and backend development, bringing the project from inception to completion in 6 months.\nDesigned and developed API from scratch using ExpressJS, MongoDB and utilized DSA principles, implementing robust authentication and data services.\nDeveloped a user-friendly React application, delivering smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a virtual counsellor in three.js with seamless lip-sync to audio playback, achieving a realistic virtual avatar effect.\nConducted in-depth research to optimize the development process, adopting new technologies and utilized Microsoft Azure to manage deployments and facilitate efficient user file management.\nMentored other interns fostering a collaborative learning environment.",
