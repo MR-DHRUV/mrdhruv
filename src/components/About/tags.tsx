@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './page.module.css'
-import { CplusplusOriginal, COriginal, JavaOriginal, JavascriptOriginal, TypescriptOriginal, PythonOriginal, ReactOriginal, NextjsOriginal, ExpressOriginal, MongodbOriginal, MysqlOriginal, RedisOriginal, AzureOriginal, FirebaseOriginal, ScikitlearnOriginal, TensorflowOriginal, NodejsPlain} from "devicons-react"
+import { CplusplusOriginal, COriginal, JavaOriginal, JavascriptOriginal, TypescriptOriginal, PythonOriginal, ReactOriginal, NextjsOriginal, ExpressOriginal, MongodbOriginal, MysqlOriginal, RedisOriginal, AzureOriginal, FirebaseOriginal, ScikitlearnOriginal, TensorflowOriginal, NodejsPlain, GoOriginal, PostgresqlOriginal } from "devicons-react"
 
 export default function Tags() {
 
@@ -9,6 +9,7 @@ export default function Tags() {
         CplusplusOriginal,
         PythonOriginal,
         JavaOriginal,
+        GoOriginal,
         JavascriptOriginal,
         TypescriptOriginal,
         NodejsPlain,
@@ -16,6 +17,7 @@ export default function Tags() {
         ReactOriginal,
         NextjsOriginal,
         MysqlOriginal,
+        PostgresqlOriginal,
         MongodbOriginal,
         FirebaseOriginal,
         RedisOriginal,

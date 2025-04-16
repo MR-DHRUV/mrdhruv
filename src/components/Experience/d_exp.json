@@ -2,14 +2,14 @@
     {
         "year": "Jan'25-Present",
         "org": "GoDaddy",
-        "description": "Just Joined...",
+        "description": "Contributing to the migration of a high-traffic Ruby monolith to modern Go and Node.js microservices, achieving 20x per-instance performance, 15x scalability, and 99.99% uptime, significantly improving system resilience and efficiency.\nDelivered robust, production-ready code with comprehensive unit and integration tests, ensuring high reliability and low regression.\nBuilding and shipping revenue-driving features that optimize user conversion funnels, directly impacting business growth and user acquisition.\nIdentified and resolved critical UI bugs, resulting in a notable boost in mobile responsiveness and overall user satisfaction across devices.",
         "title": "SDE Intern",
         "image":"/static/godaddy.png"
     },
     {
         "year": "May'23-Aug'23",
         "org": "Rise Higher Education",
-        "description": "Single-handedly built a comprehensive website from scratch, encompassing both frontend and backend development, bringing the project from inception to completion in 6 months.\nDesigned and developed API from scratch using ExpressJS, MongoDB and utilized DSA principles, implementing robust authentication and data services.\nDeveloped a user-friendly React application, delivering smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a virtual counsellor in three.js with seamless lip-sync to audio playback, achieving a realistic virtual avatar effect.\nConducted in-depth research to optimize the development process, adopting new technologies and utilized Microsoft Azure to manage deployments and facilitate efficient user file management.\nMentored other interns fostering a collaborative learning environment.",
+        "description": "Built the company’s core product within 6 months, single-handedly developing both the frontend and backend, driving rapid product launch, business visibility and market entry.\nDesigned and developed secure, high-performance APIs with ExpressJS and MongoDB for authentication and data handling ensuring availability and reliability.\nDeveloped a user-friendly React application, delivering smooth navigation, intuitive interfaces, and optimal performance for an enhanced user experience.\nEngineered a virtual counsellor in three.js with seamless lip-sync to audio playback, achieving a realistic virtual avatar effect.\nConducted in-depth research to optimize the development process, adopting new technologies and utilized Microsoft Azure to manage deployments and facilitate efficient user file management.\nMentored other interns fostering a collaborative learning environment.",
         "title": "SDE Intern",
         "image":"/static/rise.jpeg"
     },
