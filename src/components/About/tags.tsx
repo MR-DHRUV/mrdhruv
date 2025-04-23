@@ -1,19 +1,18 @@
 import React from 'react'
 import styles from './page.module.css'
-import { CplusplusOriginal, COriginal, JavaOriginal, JavascriptOriginal, TypescriptOriginal, PythonOriginal, ReactOriginal, NextjsOriginal, ExpressOriginal, MongodbOriginal, MysqlOriginal, RedisOriginal, AzureOriginal, FirebaseOriginal, ScikitlearnOriginal, TensorflowOriginal, NodejsPlain, GoOriginal, PostgresqlOriginal } from "devicons-react"
+import { CplusplusOriginal, JavaOriginal, JavascriptOriginal, TypescriptOriginal, PythonOriginal, ReactOriginal, NextjsOriginal, MongodbOriginal, MysqlOriginal, RedisOriginal, AzureOriginal, FirebaseOriginal, ScikitlearnOriginal, TensorflowOriginal, NodejsPlain, GoOriginal, PostgresqlOriginal, DockerPlain, KubernetesOriginal, CsharpOriginal } from "devicons-react"
 
 export default function Tags() {
 
     const skills = [
-        COriginal,
         CplusplusOriginal,
+        CsharpOriginal,
         PythonOriginal,
         JavaOriginal,
         GoOriginal,
         JavascriptOriginal,
         TypescriptOriginal,
         NodejsPlain,
-        ExpressOriginal,
         ReactOriginal,
         NextjsOriginal,
         MysqlOriginal,
@@ -21,6 +20,8 @@ export default function Tags() {
         MongodbOriginal,
         FirebaseOriginal,
         RedisOriginal,
+        DockerPlain,
+        KubernetesOriginal,
         AzureOriginal,
         TensorflowOriginal,
         ScikitlearnOriginal,
