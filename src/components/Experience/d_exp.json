@@ -2,7 +2,7 @@
     {
         "year": "Jan'25-Present",
         "org": "GoDaddy",
-        "description": "Contributing to the migration of a high-traffic Ruby monolith to modern Go and Node.js microservices, achieving 20x per-instance performance, 15x scalability, and 99.99% uptime, significantly improving system resilience and efficiency.\nDelivered robust, production-ready code with comprehensive unit and integration tests, ensuring high reliability and low regression.\nBuilding and shipping revenue-driving features that optimize user conversion funnels, directly impacting business growth and user acquisition.\nIdentified and resolved critical UI bugs, resulting in a notable boost in mobile responsiveness and overall user satisfaction across devices.",
+        "description": "Contributing to the migration of a high-traffic Ruby monolith to modern Go and Node.js microservices, achieving 20x per-instance performance, 15x scalability, and 99.99% uptime, significantly improving system resilience and efficiency.\nDelivered robust, production-ready code with comprehensive unit and integration tests, ensuring high reliability and low regression.\nBuilding and shipping revenue-driving features that optimize user conversion funnels, directly impacting business growth and user acquisition.\nIdentified and resolved critical UI bugs that were causing friction and significant drop-offs for ~40% of users, leading to a notable boost in mobile responsiveness and overall user satisfaction across diverse devices.",
         "title": "SDE Intern",
         "image":"/static/godaddy.png"
     },
