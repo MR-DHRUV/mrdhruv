@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { PageEdit } from 'iconoir-react';
-import { Code, InterestsOutlined, WorkspacePremium, GppGood, NearMe, Try } from '@mui/icons-material';
+import { Code, InterestsOutlined, WorkspacePremium, GppGood, NearMe, Try, CurrencyBitcoin } from '@mui/icons-material';
 
 export interface cardProp {
     isLast: boolean;
@@ -25,7 +25,8 @@ const dict: DictProp = {
     "certify": <WorkspacePremium width={size} height={size} />,
     "validator": <Code width={size} height={size} />,
     "notify": <PageEdit width={size} height={size} />,
-    "smoothy": <InterestsOutlined width={size} height={size} />
+    "smoothy": <InterestsOutlined width={size} height={size} />,
+    "trading_system": <CurrencyBitcoin width={size} height={size} />
 }
 
 

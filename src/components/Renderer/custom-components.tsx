@@ -148,3 +148,11 @@ export function figure({
         </figure>
     );
 };
+
+export function hr() {
+    return (
+        <hr
+            className="border-b-[0.3px] my-6"
+        />
+    );
+}

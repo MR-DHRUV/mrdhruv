@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import * as runtime from 'react/jsx-runtime';
 import Callout from './callout';
-import { a, figure, h1, h2, h3, h4, h5, h6, li, p } from './custom-components';
+import { a, figure, h1, h2, h3, h4, h5, h6, hr, li, p } from './custom-components';
 
 const useMDXComponents = (code: string) => {
     // velite generated a function to render the mdx and saves it as string
@@ -23,6 +23,7 @@ const components = {
     li,
     p,
     figure,
+    hr
 }
 
 interface MDXProps {
