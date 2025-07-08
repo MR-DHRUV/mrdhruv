@@ -6,7 +6,8 @@ import "../../styles/mdx.css"
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Link as LinkIcon } from "iconoir-react";
+import {Link as LinkIcon } from "iconoir-react";
+import BackButton from "./BackButton";
 
 interface ProjectPageProps {
     params: {
@@ -14,7 +15,7 @@ interface ProjectPageProps {
     }
 }
 
-async function getProject(params: ProjectPageProps['params']) {
+function getProject(params: ProjectPageProps['params']) {
     const slug = params?.slug.join('/');
     const project = projects.find((project) => project.slugAsParams === slug);
     return project;
@@ -61,14 +62,14 @@ export async function generateMetadata({
 }
 
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-
-    const project = await getProject(params);
+export default function ProjectPage({ params }: ProjectPageProps) {
+    const project = getProject(params);
     if (!project) {
         notFound();
     }
 
-    return <>
+    return <div>
+        <BackButton />
         <div className="main-container bg-trans gap-3 w-full max-w-[700px] !justify-center">
             <h1 className="heading-xl">
                 {project.title}
@@ -102,6 +103,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <MDXContent code={project.body} />
             <hr className=" mb-0 border-zinc-400 border-b-1" />
         </article>
-    </>
+    </div>
 
 }

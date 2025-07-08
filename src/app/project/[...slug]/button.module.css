@@ -1,0 +1,30 @@
+.backBtnDesktop {
+    padding: 8px;
+    border: 1px solid rgb(158, 158, 158);
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 0.01);
+    align-items: center;
+    align-content: center;
+    display: flex;
+    gap: 6px;
+    font-family: var(--font-ibm-plex-mono), monospace !important;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    color: #828282;
+    width: max-content;
+    position: fixed;
+    top:7.1rem;
+    z-index:999;
+    left: calc(50vw - 350px - 70px);
+}
+
+@media screen and (max-width: 900px) {
+    .backBtnDesktop {
+        display: none;
+    }
+}
+
+.scrolled {
+    top: 1rem;
+}
