@@ -8,7 +8,7 @@ export default function About() {
                 <span className="text-muted">
                     {'{{'}
                 </span>
-                SDE-Intern
+                Engineering
                 <span className="text-muted">
                     {'}}'}
                 </span>
@@ -16,7 +16,10 @@ export default function About() {
             </h1>
             <Tags />
             <p className="desc-l">
-            Hi, I&#39;m Dhruv—a curious and passionate software developer who loves creating innovative solutions that make an impact. Proficient in <span className="fw-med">Next.js, React.js, and Node.js</span>, I excel at building high-performance applications and delivering seamless user experiences. My strong grasp of <span className="fw-med">Data Structures and Algorithms</span> helps me design scalable, reliable software. With experience working alongside startups, local businesses, and campus clubs, I thrive in dynamic teams. Currently, I&#39;m interning at <span className="fw-med">GoDaddy</span>. Beyond coding, I enjoy traveling, cars, and exploring the latest tech. Let’s connect and build something great together!
+                Hi<span className="hello">👋</span>, I&#39;m Dhruv, I build high fidelity software solutions that are <span className="fw-med">realistic, scalable and are build to last</span>. I work across the stack with modern technologies and I enjoy crafting fast, intuitive user experiences that solve real problems.
+                I’ve built products from <span className="fw-med">0 to 1 for startups and local businesses</span> — turning ideas into fully functional, production-ready software.
+                Right now, I’m working as an <span className="fw-med">SDE I at GoDaddy</span>, where I get to work on real-world, high-impact products with an awesome team. I thrive in dynamic environments and love collaborating with people who are passionate about what they do.
+                Beyond tech, I’m into travelling, cars, and keeping up with the latest in software and gadgets. If you’re building something interesting or just want to connect — let’s talk!
             </p>
         </div>
     )
